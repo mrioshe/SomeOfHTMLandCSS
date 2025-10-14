@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mauricio Ríos Hernández — Mechanical Engineer — CV</title>
+  <style>
+    :root{
+      --accent:#0b6bd6;
+      --muted:#666;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --maxw:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      box-shadow:0 8px 24px rgba(20,20,40,0.08);
+      border-radius:10px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+    }
+    header{
+      grid-column:1 / -1;
+      display:flex;
+      gap:18px;
+      padding:28px;
+      align-items:center;
+      border-bottom:1px solid #eee;
+    }
+    .photo{
+      width:96px;height:96px;border-radius:8px;background:#e9eef8;
+      display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);
+      overflow:hidden;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .title h1{margin:0;font-size:20px;}
+    .title p{margin:4px 0 0;color:var(--muted);font-size:14px;}
+    .left{
+      padding:22px;
+      border-right:1px solid #f0f0f0;
+      background:linear-gradient(180deg, rgba(11,107,214,0.03), transparent);
+    }
+    .right{padding:22px;}
+    .section{margin-bottom:18px;}
+    .section h3{margin:0 0 10px;font-size:13px;color:var(--accent);letter-spacing:0.6px;}
+    .contact p, .small{font-size:14px;color:var(--muted);margin:6px 0;}
+    ul{margin:6px 0 12px 18px;}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px;}
+    .skill{background:#eef6ff;padding:6px 10px;border-radius:999px;font-size:13px;color:#033a66;}
+    .experience-item{margin-bottom:12px;}
+    .meta{font-size:13px;color:var(--muted);}
+    footer{padding:18px;border-top:1px solid #eee;font-size:13px;color:var(--muted);text-align:center;}
+    a{color:var(--accent);text-decoration:none;}
+    @media (max-width:800px){
+      .container{grid-template-columns:1fr; padding:0;}
+      .left{border-right:none;border-bottom:1px solid #f0f0f0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="photo" aria-hidden="true">
+        <!-- PLACEHOLDER FOR PHOTO: replace src with the candidate photo path -->
+        <!-- Example:  -->
+         <img src="CVphoto.png" alt="Mauricio Ríos Hernández">
+      </div>
+      <div class="title">
+        <h1>Mauricio Ríos Hernández</h1>
+        <p > <b>Mechanical Engineer</b>  • Mechanical Design • Mechanical Projects • Personnel coordinator  • CAD & CAM  • FEA  </p>
+        <p class="meta">  • Electronics & Intrumentation • Embedded Systems • Automation • Programming & DataScience • Physics </p>
+      </div>
+    </header>
+
+    <!-- LEFT COLUMN -->
+    <aside class="left" aria-label="Contact and skills">
+      <section class="section contact">
+        <h3>Contact</h3>
+        <p class="small"> <b>Email:</b> <a href="mailto:mrioshe17@outlook.com">mrioshe17@outlook.com</a></p>
+        <p class="small"> <b>Phone:</b> +57 312 6497849</p>
+        <p class="small"><b>Location:</b>   Antioquia, Colombia</p>
+        <p class="small"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mrioshe17/" target="_blank" rel="noopener">linkedin.com/in/mrioshe17</a></p>
+        <p class="small"> <b>GitHub:</b> <a href="https://github.com/mrioshe" target="_blank" rel="noopener">github.com/mrioshe</a></p>
+        <p class="small"><b>GrabCAD:</b> <a href="https://grabcad.com/mauricio.rios.hernandez-5" target="_blank" rel="noopener">grabcad.com/mauricioRios</a></p>
+      </section>
+
+      <section class="section">
+        <h3>Technical Skills</h3>
+        <div class="skill-list">
+          <span class="skill"> <b>CADs:</b> · Inventor · AutoCAD · Fusion</span>
+          <span class="skill"><b>FEA: </b>· ANSYS (Static Structural, Fluent) </span>
+          <span class="skill"><b>Circuits simulation:</b>  · LTspice </span>
+          <span class="skill">· OrCAD · Proteus · Digital  </span>
+          <span class="skill"> <b>Programming:</b> · Python · MATLAB </span>
+          <span class="skill"> · Java · SQL · C & C++</span>
+          <span class="skill"> · R & RStudio · LaTeX · EES</span>
+          <span class="skill"> <b>MCUs:</b> · STM32 · Arduino · ESP32</span>
+          <span class="skill"> <b>PLCs:</b> · TIA Portal · ISPSoft & COMMGR</span>
+          <span class="skill"> <b>Graphics Desing:</b> · Corel Draw · Photoshop · Canva</span>
+          <span class="skill"> <b>Office:</b> · Word · Excel · Power Point  · Acces</span>
+          <span class="skill"> <b>Others:</b> · LabVIEW ·Linux </span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Languages & Mobility</h3>
+        <p class="small"><strong>Spanish:</strong> Native</p>
+        <p class="small"><strong>English:</strong> B2 (intermediate)</p>
+        <p class="small"><strong>Driving licenses:</strong> A2 & B1 · Own vehicle · Full availability</p>
+      </section>
+
+      <section class="section">
+        <h3>Other</h3>
+        <ul>
+          <li>CAD repository and public models available on GrabCAD.</li>
+          <li>Experience with technical drafting, fabrication drawings and layouts.</li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="right">
+      <section class="section"> 
+        <h3>Professional Summary</h3>
+        <p style="text-align: justify;">
+          Mechanical Engineer with a strong focus on mechanical design and electronic systems integration. Versatile and quick to adapt to new responsibilities, effective both individually and in teams. Experienced in taking engineering projects from quotation through commissioning and final delivery. Practical experience in automated pneumatic machinery design, CAD-based part and assembly modeling, finite element simulation, and embedded control.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>Professional Experience</h3>
+
+        <div class="experience-item">
+          <strong>Resident Engineer & Mechanical Project Manager</strong>
+          <div class="meta">Proymant Proyectos y Mantenimientos S.A.S. · Aug 2024 – Present</div>
+          <ul>
+            <li>Coordinated personnel for corrective and preventive maintenance tasks and led metal-mechanical projects at Eurocerámica plant.</li>
+            <li>Executed mechanical project implementation from quotation through commissioning and handover.</li>
+            <li>Provided drafting services: machine element drawings, fabrication drawings, layouts, mechanical designs and finite element simulations.</li>
+            <li>Notable projects: silo enclosure systems, scale pit enclosure.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Mechanical Engineering Intern</strong>
+          <div class="meta">Crystal S.A.S. · Feb 2024 – Aug 2024</div>
+          <ul>
+            <li>Supported mechanical design and assembly tasks for production equipment.</li>
+            <li>Participated in prototyping and testing phases.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Physics Laboratory Teaching Assistant — Electricity & Magnetism</strong>
+          <div class="meta">National University of Colombia · Feb 2023 – Nov 2023</div>
+          <ul>
+            <li>Delivered theoretical instruction aligned with laboratory practices and supported students during experiments.</li>
+            <li>Repaired and maintained laboratory equipment and contributed to experiment design.</li>
+            <li>Notable projects: design and prototyping of a low-power diode-laser CNC engraver; machining and construction of a standing-wave generator for a string (physics lab).</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Mechanical Draftsman / Service Provider</strong>
+          <div class="meta">Eurocerámica (contracted) · dates vary</div>
+          <ul>
+            <li>Produced manufacturing and assembly drawings, machine element designs and layouts for industrial applications.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Selected Projects / Machine Design</h3>
+        <ul>
+          <li>Semi-automatic machine for folding, gluing and plastic-strapping of cardboard label-stands (design & prototyping).</li>
+          <li>Design and construction of a labeling and plastic-strapping machine for sock packages using tagging machines.</li>
+          <li>Three-head marking machine design.</li>
+          <li>Low-power diode-laser CNC engraver — design & prototype.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Education</h3>
+
+        <div class="experience-item">
+          <strong>B.Sc. Mechanical Engineering</strong>
+          <div class="meta">University of Antioquia · Feb 2017 – Sep 2024</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>B.Sc. (Studying) — Physics Engineering</strong>
+          <div class="meta">National University of Colombia · Aug 2020 – Present</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>Technical Degree — Software Programming</strong>
+          <div class="meta">Servicio Nacional de Aprendizaje (SENA) · Jan 2015 – Nov 2016</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Software & Tools (selected)</h3>
+        <ul>
+          <li>CAD: Autodesk Inventor, AutoCAD, Solid Edge, Fusion 360, SolidWorks, ORCAD.</li>
+          <li>Simulation: ANSYS (Static Structural, Fluent).</li>
+          <li>Programming: Python, MATLAB, EES, Arduino, C (ARM microcontroller focus), STM32CubeIDE.</li>
+          <li>Industrial automation: TIA Portal (Siemens PLC), ISPSoft, COMMGR (Delta PLC).</li>
+          <li>Statistical tools: R, RStudio. Documentation: LaTeX.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>Availability & Additional Info</h3>
+        <ul>
+          <li>Driving license: A2. Own vehicle. Full availability.</li>
+          <li>Open to roles in mechanical design, project engineering, manufacturing engineering and automation.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>Mauricio Ríos Hernández. La Ceja Antioquia Colombia. 2025.</small>
+    </footer>
+  </div>
+</body>
+</html>

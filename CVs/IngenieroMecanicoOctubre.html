@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mauricio Ríos Hernández — Ingeniero Mecánico — CV</title>
+  <style>
+    :root{
+      --accent:#0b6bd6;
+      --muted:#666;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --maxw:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      box-shadow:0 8px 24px rgba(20,20,40,0.08);
+      border-radius:10px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+    }
+    header{
+      grid-column:1 / -1;
+      display:flex;
+      gap:18px;
+      padding:28px;
+      align-items:center;
+      border-bottom:1px solid #eee;
+    }
+    .photo{
+      width:96px;height:96px;border-radius:8px;background:#e9eef8;
+      display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);
+      overflow:hidden;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .title h1{margin:0;font-size:20px;}
+    .title p{margin:4px 0 0;color:var(--muted);font-size:14px;}
+    .left{
+      padding:22px;
+      border-right:1px solid #f0f0f0;
+      background:linear-gradient(180deg, rgba(11,107,214,0.03), transparent);
+    }
+    .right{padding:22px;}
+    .section{margin-bottom:18px;}
+    .section h3{margin:0 0 10px;font-size:13px;color:var(--accent);letter-spacing:0.6px;}
+    .contact p, .small{font-size:14px;color:var(--muted);margin:6px 0;}
+    ul{margin:6px 0 12px 18px;}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px;}
+    .skill{background:#eef6ff;padding:6px 10px;border-radius:999px;font-size:13px;color:#033a66;}
+    .experience-item{margin-bottom:12px;}
+    .meta{font-size:13px;color:var(--muted);}
+    footer{padding:18px;border-top:1px solid #eee;font-size:13px;color:var(--muted);text-align:center;}
+    a{color:var(--accent);text-decoration:none;}
+    @media (max-width:800px){
+      .container{grid-template-columns:1fr; padding:0;}
+      .left{border-right:none;border-bottom:1px solid #f0f0f0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="photo" aria-hidden="true">
+        <!-- PLACEHOLDER FOR PHOTO: replace src with the candidate photo path -->
+        <!-- Example:  -->
+         <img src="CVphoto.png" alt="Mauricio Ríos Hernández">
+      </div>
+      <div class="title">
+        <h1>Mauricio Ríos Hernández</h1>
+        <p > <b>Ingeniero Mecánico</b>  • Diseño Mecánico • Proyectos Mecánicos • Coordinación de personal  • CAD & CAM  • FEA  </p>
+        <p class="meta">  • Electrónica & Instrumentación • Sistemas Embebidos • Automatización • Programming & DataScience • Física </p>
+      </div>
+    </header>
+
+    <!-- LEFT COLUMN -->
+    <aside class="left" aria-label="Contacto y habilidades">
+      <section class="section contact">
+        <h3>Contacto</h3>
+        <p class="small"> <b>Email:</b> <a href="mailto:mrioshe17@outlook.com">mrioshe17@outlook.com</a></p>
+        <p class="small"> <b>Teléfono:</b> +57 312 6497849</p>
+        <p class="small"><b>Ubicación:</b>   Antioquia, Colombia</p>
+        <p class="small"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mrioshe17/" target="_blank" rel="noopener">linkedin.com/in/mrioshe17</a></p>
+        <p class="small"> <b>GitHub:</b> <a href="https://github.com/mrioshe" target="_blank" rel="noopener">github.com/mrioshe</a></p>
+        <p class="small"><b>GrabCAD:</b> <a href="https://grabcad.com/mauricio.rios.hernandez-5" target="_blank" rel="noopener">grabcad.com/mauricioRios</a></p>
+      </section>
+
+      <section class="section">
+        <h3>Habilidades técnicas</h3>
+        <div class="skill-list">
+          <span class="skill"> <b>CADs:</b> · Inventor · AutoCAD · Fusion</span>
+          <span class="skill"><b>FEA: </b>· ANSYS (Static Structural, Fluent) </span>
+          <span class="skill"><b>Simulación de circuitos:</b>  · LTspice </span>
+          <span class="skill">· OrCAD · Proteus · Digital  </span>
+          <span class="skill"> <b>Programación:</b> · Python · MATLAB · LabVIEW </span>
+          <span class="skill"> · Java · SQL · C & C++ ·Linux</span>
+          <span class="skill"> · R & RStudio · LaTeX · EES</span>
+          <span class="skill"> <b>MCUs:</b> · STM32 · Arduino · ESP32</span>
+          <span class="skill"> <b>PLCs:</b> · TIA Portal · ISPSoft & COMMGR</span>
+          <span class="skill"> <b>Office:</b> · Word · Excel · Power Point  · Acces</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Idiomas y movilidad</h3>
+        <p class="small"><strong>Español:</strong> Nativo</p>
+        <p class="small"><strong>Inglés:</strong> B2 (intermedio)</p>
+        <p class="small"><strong>Licencias de conducción:</strong> A2 & B1 · Vehículo propio · Disponibilidad total</p>
+      </section>
+
+    <section class="section">
+        <h3>Formación</h3>
+
+        <div class="experience-item">
+          <strong>B.Sc. Ingeniería Mecánica</strong>
+          <div class="meta">Universidad de Antioquia · Feb 2017 – Sep 2024</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>B.Sc. (En curso) — Ingeniería Física</strong>
+          <div class="meta">Universidad Nacional de Colombia · Ago 2020 – Presente</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>B.Sc. (En curso) — Applied Data Science with Python Specialization</strong>
+          <div class="meta">Online Coursera Specialization · University Of Michigan</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>Tecnólogo — Programación de Software</strong>
+          <div class="meta">Servicio Nacional de Aprendizaje (SENA) · Ene 2015 – Nov 2016</div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="right">
+      <section class="section"> 
+        <h3>Resumen profesional</h3>
+        <p style="text-align: justify;">
+          Ingeniero Mecánico con fuerte enfoque en diseño mecánico e integración de sistemas electrónicos. Versátil y rápido para adaptarse a nuevas responsabilidades, efectivo tanto de forma individual como en equipo. Experiencia en llevar proyectos de ingeniería desde la cotización hasta la puesta en marcha y entrega final. Experiencia práctica en diseño de maquinaria neumática automatizada, modelado de piezas y ensamblajes en CAD, simulación por elementos finitos y control embebido.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>Experiencia profesional</h3>
+
+        <div class="experience-item">
+          <strong>Ingeniero Residente y Jefe de Proyectos Mecánicos</strong>
+          <div class="meta">Proymant Proyectos y Mantenimientos S.A.S. · Ago 2024 – Presente</div>
+          <ul>
+            <li>Coordiné personal para la ejecución de tareas de mantenimiento correctivo y preventivo, así como la implementación de proyectos metal-mecánicos en la planta de producción de Eurocerámica.</li>
+            <li>Lideré el desarrollo de proyectos mecánicos para empresas industriales, cubriendo el ciclo completo desde la cotización y la puesta en marcha hasta la entrega final.</li>
+            <li>Brindé servicios de dibujo técnico para Eurocerámica, incluyendo planos de componentes de maquinaria, planos de fabricación, diseños de layout, conceptos mecánicos y simulaciones por elementos finitos.</li>
+            <li>Proyectos mecánicos destacados: sistema de cerramiento para silo y estructura de contención para fosobáscula (truck scale).</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Pasantía en Ingeniería Mecánica</strong>
+          <div class="meta">Crystal S.A.S. · Feb 2024 – Ago 2024</div>
+          <ul>
+            <li>Apoyé tareas de diseño mecánico y montaje para equipos de producción.</li>
+            <li>Participé en fases de prototipado y pruebas.</li>
+            <li>Diseñé una máquina semiautomática para el plegado, pegado y flejado plástico de exhibidores de etiquetas (diseño y prototipado).</li>
+            <li>Diseño y construcción de una máquina de etiquetado y flejado plástico para paquetes de medias usando tagging machines.</li>
+            <li>Diseño de una máquina marcadora de tres cabezas.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Proyectos propios de ingeniería</strong>
+          <ul>
+            <li>Desarrollo de un grabador CNC compacto usando un láser diodo de baja potencia. El proyecto cubre todo el proceso de diseño, desde la fuente de corriente y la electrónica de control hasta la implementación del firmware y conectividad inalámbrica.</li>
+            <li>Desarrollo de un sensor capacitivo para medir y controlar el nivel de fluido en un tanque.</li>
+            <li>Diseño y construcción (mecanizado) de un Generador de Ondas Estacionarias en una Cuerda para laboratorio de Física de Ondas.</li>
+            <li>Desarrollo de control PID de temperatura usando ESP32 para el módulo de calentamiento de una prensa de sublimación.</li>
+            <li>Se desarrolló un modulador de señal AM usando un ESP32 y Python, incluyendo diseño de circuito y firmware. Adicionalmente se construyó un sistema separado con Arduino para demodulación, adquisición y visualización de la señal.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Ayudante de laboratorio de Física — Electricidad y Magnetismo</strong>
+          <div class="meta">Universidad Nacional de Colombia · Feb 2023 – Nov 2023</div>
+          <ul>
+            <li>Impartí instrucción teórica alineada con las prácticas de laboratorio y apoyé a los estudiantes durante los experimentos.</li>
+            <li>Reparé y mantuve equipos de laboratorio y contribuí al diseño de experimentos.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mauricio Ríos Hernández — CV ATS</title>
+  <style>
+    /* ── PRINT PAGE: Tabloide (11 × 17 in) ── */
+    @page {
+      size: 11in 17in;
+      margin: 14mm 18mm;
+    }
+
+    * { margin: 0.01; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.4;
+      color: #000000;
+      background: #ffffff;
+      /* En pantalla: simula el ancho útil del tabloide menos márgenes */
+      max-width: calc(11in - 36mm);
+      margin: 0 auto;
+      padding: 14mm 0;
+    }
+
+    /* ── HEADER ── */
+    .cv-name {
+      font-size: 18pt;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+
+    .cv-title {
+      font-size: 10.5pt;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .cv-contact {
+      font-size: 9.5pt;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .cv-contact a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* ── DIVIDERS ── */
+    hr {
+      border: none;
+      border-top: 1.5px solid #000;
+      margin: 0 0 6px 0;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    /* ── JOB / EDUCATION ENTRIES ── */
+    .entry {
+      margin-bottom: 8px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 10.5pt;
+    }
+
+    .entry-date {
+      font-size: 9.5pt;
+      white-space: nowrap;
+    }
+
+    .entry-sub {
+      font-size: 9.5pt;
+      margin-bottom: 3px;
+    }
+
+    ul {
+      margin-left: 16px;
+      margin-top: 2px;
+    }
+
+    ul li {
+      font-size: 10pt;
+      margin-bottom: 1px;
+    }
+
+    /* ── SKILLS / LANGUAGES ── */
+    .skills-block p, .lang-block p {
+      font-size: 10pt;
+      margin-bottom: 2px;
+    }
+
+    @media print {
+      body {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ ENCABEZADO ═══ -->
+  <div class="cv-name">Mauricio Ríos Hernández</div>
+  <div class="cv-title">Ingeniero Mecánico</div>
+  <div class="cv-contact">
+    mrioshe17@outlook.com &nbsp;|&nbsp; +57 312 6497849 &nbsp;|&nbsp; Antioquia, Colombia<br>
+    LinkedIn: linkedin.com/in/mrioshe17 &nbsp;|&nbsp; GitHub: github.com/mrioshe &nbsp;|&nbsp; GrabCAD: grabcad.com/mauricioRios
+  </div>
+
+  <hr>
+
+  <!-- ═══ RESUMEN PROFESIONAL ═══ -->
+  <div class="section-title">Resumen Profesional</div>
+  <p style="font-size:10.5pt;">
+    Ingeniero Mecánico con fuerte enfoque en diseño mecánico e integración de sistemas electrónicos. Versátil y rápido para adaptarse a nuevas responsabilidades, efectivo tanto de forma individual como en equipo. Experiencia en llevar proyectos de ingeniería desde la cotización hasta la puesta en marcha y entrega final. Experiencia práctica en diseño de maquinaria neumática automatizada, modelado de piezas y ensamblajes en CAD, simulación por elementos finitos y control embebido.
+  </p>
+
+  <hr style="margin-top:12px;">
+
+  <!-- ═══ EXPERIENCIA PROFESIONAL ═══ -->
+  <div class="section-title">Experiencia Profesional</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Ingeniero Residente y Jefe de Proyectos Mecánicos</span>
+      <span class="entry-date">Ago 2024 – Presente</span>
+    </div>
+    <div class="entry-sub">Proymant Proyectos y Mantenimientos S.A.S. — Antioquia, Colombia</div>
+    <ul>
+      <li>Coordiné personal para la ejecución de tareas de mantenimiento correctivo y preventivo, así como la implementación de proyectos metal-mecánicos en la planta de producción de Eurocerámica.</li>
+      <li>Lideré el desarrollo de proyectos mecánicos para empresas industriales, cubriendo el ciclo completo desde la cotización y la puesta en marcha hasta la entrega final.</li>
+      <li>Brindé servicios de dibujo técnico para Eurocerámica, incluyendo planos de piezas mecánicas, planos de fabricación, layouts, transmisión de potencia y simulaciones por elementos finitos (FEA).</li>
+      <li>Proyectos destacados: sistema de cerramiento de silos y estructura de cerramiento para fosobáscula (truck scale).</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Práctica en Ingeniería Mecánica</span>
+      <span class="entry-date">Feb 2024 – Ago 2024</span>
+    </div>
+    <div class="entry-sub">Crystal S.A.S. — Antioquia, Colombia</div>
+    <ul>
+      <li>Apoyé tareas de diseño mecánico y montaje para equipos de producción.</li>
+      <li>Participé en fases de prototipado y pruebas de equipos.</li>
+      <li>Diseñé una máquina semiautomática para el plegado, pegado y plastiflechado de etiquetas para paquetes de medias (diseño y prototipado).</li>
+      <li>Diseño y construcción de una máquina de etiquetado y plastiflechado para paquetes de medias usando tagging machines.</li>
+      <li>Diseño de una máquina marquilladora de tres cabezales.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Monitor de Laboratorio — Física de Electricidad y Magnetismo</span>
+      <span class="entry-date">Feb 2023 – Nov 2023</span>
+    </div>
+    <div class="entry-sub">Universidad Nacional de Colombia — Medellín, Colombia</div>
+    <ul>
+      <li>Impartí instrucción teórica alineada con las prácticas de laboratorio y apoyé a los estudiantes durante los experimentos.</li>
+      <li>Reparé y mantuve equipos de laboratorio; contribuí al diseño de nuevos experimentos.</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Proyectos Propios de Ingeniería</span>
+      <span class="entry-date"></span>
+    </div>
+    <ul>
+      <li>Desarrollo de una grabadora CNC de diodo láser de baja potencia (diseño mecánico, electrónica de control, firmware y conectividad inalámbrica).</li>
+      <li>Desarrollo de un sensor capacitivo para medir y controlar el nivel de fluido en un tanque.</li>
+      <li>Diseño y construcción (mecanizado) de un generador de ondas estacionarias en una cuerda para laboratorio de Física de Ondas.</li>
+      <li>Control PID de temperatura usando ESP32 para el módulo de calentamiento de una prensa de sublimación.</li>
+      <li>Modulador de señal AM usando ESP32 y Python (diseño de circuito y firmware); sistema separado con Arduino para demodulación, adquisición y visualización de señal.</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- ═══ FORMACIÓN ACADÉMICA ═══ -->
+  <div class="section-title">Formación Académica</div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Ingeniería Mecánica — Título obtenido</span>
+      <span class="entry-date">Feb 2017 – Sep 2024</span>
+    </div>
+    <div class="entry-sub">Universidad de Antioquia — Medellín, Colombia</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Ingeniería Física — En curso</span>
+      <span class="entry-date">Ago 2020 – Presente</span>
+    </div>
+    <div class="entry-sub">Universidad Nacional de Colombia — Medellín, Colombia</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Applied Data Science with Python Specialization — En curso</span>
+      <span class="entry-date">En progreso</span>
+    </div>
+    <div class="entry-sub">Coursera — University of Michigan (Online)</div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-header">
+      <span class="entry-title">Técnico en Programación de Software</span>
+      <span class="entry-date">Ene 2015 – Nov 2016</span>
+    </div>
+    <div class="entry-sub">SENA — Servicio Nacional de Aprendizaje</div>
+  </div>
+
+  <hr>
+
+  <!-- ═══ HABILIDADES TÉCNICAS ═══ -->
+  <div class="section-title">Habilidades Técnicas</div>
+  <div class="skills-block">
+    <p><strong>CAD / CAM:</strong> Autodesk Inventor, AutoCAD, Autodesk Fusion 360</p>
+    <p><strong>FEA / Simulación:</strong> ANSYS (Static Structural, Fluent)</p>
+    <p><strong>Simulación de circuitos:</strong> LTspice, OrCAD, Proteus, Digital</p>
+    <p><strong>Programación:</strong> Python, MATLAB, LabVIEW, Java, C, C++, SQL, R / RStudio, LaTeX, EES, Linux</p>
+    <p><strong>Microcontroladores (MCU):</strong> STM32, Arduino, ESP32</p>
+    <p><strong>PLCs / Automatización:</strong> TIA Portal (Siemens), ISPSoft &amp; COMMGR (Delta)</p>
+    <p><strong>Ofimática:</strong> Microsoft Word, Excel, PowerPoint, Access</p>
+  </div>
+
+  <hr>
+
+  <!-- ═══ IDIOMAS ═══ -->
+  <div class="section-title">Idiomas</div>
+  <div class="lang-block">
+    <p><strong>Español:</strong> Nativo</p>
+    <p><strong>Inglés:</strong> B1 — Intermedio</p>
+  </div>
+
+  <hr>
+
+  <!-- ═══ INFORMACIÓN ADICIONAL ═══ -->
+  <div class="section-title">Información Adicional</div>
+  <div class="skills-block">
+    <p><strong>Licencias de conducción:</strong> A2 y B1</p>
+    <p><strong>Movilidad:</strong> Vehículo propio — Disponibilidad total para desplazamiento</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,573 @@
+\documentclass[11pt, a4paper]{article}
+
+%% ── Paquetes ────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins}
+
+%% ── Colores ────────────────────────────────────────────────────────────────
+\definecolor{accentblue}{HTML}{0b6bd6}
+\definecolor{lightblue}{HTML}{eef6ff}
+\definecolor{darkblue}{HTML}{033a66}
+\definecolor{muted}{HTML}{555555}
+\definecolor{warnyellow}{HTML}{fffbe6}
+\definecolor{warnyellowborder}{HTML}{d4a017}
+\definecolor{tipgreen}{HTML}{f0faf0}
+\definecolor{tipgreenborder}{HTML}{2e7d32}
+
+%% ── Tipografía y secciones ──────────────────────────────────────────────────
+\titleformat{\section}{\large\bfseries\color{accentblue}}{}{0em}{}[\color{accentblue}\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries\color{darkblue}}{}{0em}{}
+\titlespacing{\section}{0pt}{14pt}{6pt}
+\titlespacing{\subsection}{0pt}{10pt}{4pt}
+
+%% ── Cabecera y pie ──────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{muted}Mauricio Ríos Hernández — Preparación Entrevista: Ingeniero de Lubricación}
+\fancyhead[R]{\small\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% ── Entornos personalizados ─────────────────────────────────────────────────
+% Caja de respuesta principal
+\newtcolorbox{respuesta}{
+  breakable,
+  colback=lightblue,
+  colframe=accentblue,
+  arc=4pt,
+  boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\small\bfseries\color{darkblue},
+}
+
+% Caja de nota de contexto (honestidad sobre el perfil)
+\newtcolorbox{nota}{
+  breakable,
+  colback=warnyellow,
+  colframe=warnyellowborder,
+  arc=4pt,
+  boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  title={\small\bfseries Nota de preparación},
+}
+
+% Caja de tip técnico
+\newtcolorbox{tip}{
+  breakable,
+  colback=tipgreen,
+  colframe=tipgreenborder,
+  arc=4pt,
+  boxrule=0.8pt,
+  left=8pt, right=8pt, top=6pt, bottom=6pt,
+  title={\small\bfseries Concepto clave},
+}
+
+%% ── Comandos de pregunta ────────────────────────────────────────────────────
+\newcommand{\pregunta}[1]{%
+  \vspace{6pt}%
+  \noindent\textbf{\color{darkblue}Pregunta: }\textit{#1}%
+  \vspace{4pt}%
+}
+
+%% ── Documento ───────────────────────────────────────────────────────────────
+\begin{document}
+
+%% Portada
+\begin{center}
+  {\LARGE\bfseries\color{accentblue} Preparación para Entrevista}\\[6pt]
+  {\large\bfseries Cargo: Ingeniero/a de Lubricación Industrial}\\[4pt]
+  {\normalsize\color{muted} Mauricio Ríos Hernández — Ingeniero Mecánico}\\[2pt]
+  {\small\color{muted} Universidad de Antioquia · Antioquia, Colombia}
+\end{center}
+\vspace{4pt}
+\noindent\rule{\linewidth}{1.2pt}
+\vspace{6pt}
+
+\begin{nota}
+Este documento contiene respuestas preparadas para cada pregunta de la entrevista técnica. Las respuestas están ajustadas al perfil real: se rescatan aptitudes transversales genuinas (mantenimiento, tribología, mecánica de máquinas, instrumentación) y se es honesto sobre el nivel de experiencia directa en lubricación, proyectando alta disposición y fundamentación técnica sólida.
+\end{nota}
+
+\vspace{4pt}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{1. Perfil y trayectoria}
+
+\pregunta{Cuéntame brevemente sobre tu trayectoria profesional y cómo llegaste al campo de la lubricación industrial.}
+
+\begin{respuesta}
+Soy Ingeniero Mecánico egresado de la Universidad de Antioquia, con formación complementaria en Ingeniería Física en la Universidad Nacional. Mi trayectoria ha estado ligada a entornos industriales de manufactura y producción continua: hice mi práctica profesional en Crystal S.A.S., donde integré el departamento de mantenimiento, participé en la programación de planes de mantenimiento preventivo, en inspecciones de condición con vibraciones y termografía, y en la implementación de metodología TPM. Posteriormente asumí el rol de Ingeniero Residente y Jefe de Proyectos Mecánicos en Proymant, contratista que presta servicios en la planta de Eurocerámica, donde coordiné mantenimiento correctivo y preventivo de equipos rotativos, estructuras y maquinaria de proceso cerámico.
+
+En ese recorrido el contacto con los departamentos de planeación de mantenimiento y confiabilidad me expuso directamente a la lubricación como disciplina crítica: lectura de manuales de fabricante con especificaciones de lubricantes, diagnóstico de fallas en rodamientos con modos de falla asociados a lubricación deficiente (pitting, desgaste adhesivo, fatiga superficial), e identificación de problemas en equipos como molinos de bolas y ventiladores de alta capacidad. Esa experiencia periférica, sumada a mi formación en tribología y mecánica del contacto, me llevó a reconocer la lubricación industrial como el área donde quiero especializarme.
+\end{respuesta}
+
+\pregunta{¿En qué tipo de plantas o industrias has trabajado?}
+
+\begin{respuesta}
+He trabajado principalmente en dos contextos industriales:
+
+\begin{itemize}[leftmargin=1.4em, itemsep=2pt]
+  \item \textbf{Industria cerámica (Eurocerámica, a través de Proymant):} planta de producción, transformación y comercialización de productos cerámicos. Equipos rotativos de alta demanda: molinos de bolas para preparación de pastas, ventiladores de alta capacidad para hornos y secadores, transportadores, bombas, reductores y maquinaria neumática automatizada.
+  \item \textbf{Industria textil (Crystal S.A.S.):} líneas de producción continua de medias. Equipos de manufactura automatizada, sistemas de accionamiento, motores eléctricos y maquinaria de etiquetado y acabado.
+\end{itemize}
+
+Ambos entornos implican producción continua, lo que hace que la confiabilidad y disponibilidad de los equipos sea crítica y que el mantenimiento tenga un impacto directo en la productividad.
+\end{respuesta}
+
+\pregunta{¿Cuál ha sido el alcance de tus responsabilidades en programas de lubricación anteriores?}
+
+\begin{respuesta}
+Quiero ser preciso en esta respuesta: mi participación en lubricación ha sido de carácter transversal y de soporte, no de liderazgo directo de un programa. En Proymant, mi responsabilidad incluía coordinar las tareas de mantenimiento preventivo —entre ellas rutinas de lubricación— definidas en los planes de Eurocerámica, verificar su ejecución, reportar novedades y escalar problemas al área de planeación. Esto implicó interpretar procedimientos de lubricación existentes, verificar que los técnicos usaran el lubricante correcto y en las cantidades correctas, y documentar hallazgos.
+
+En Crystal, apoyé la construcción y seguimiento de planes de mantenimiento preventivo que incluían rutas de lubricación. También tuve acceso a la lectura de manuales de equipos para identificar especificaciones de lubricantes, frecuencias y puntos de aplicación.
+
+Lo que ofrezco para este cargo es precisamente dar ese salto: aplicar toda esa base de mantenimiento, mecánica de máquinas y tribología a la gestión especializada de lubricación, con la disposición y la velocidad de aprendizaje que ha caracterizado mi carrera.
+\end{respuesta}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{2. Evaluación Técnica — Lubricación Industrial}
+
+\subsection{2.1 Implementación de programas de lubricación}
+
+\pregunta{¿Has liderado la implementación de un programa de lubricación desde cero? Describe el proceso.}
+
+\begin{respuesta}
+No he liderado la implementación completa de un programa de lubricación como tal, pero sí he participado en la estructuración de planes de mantenimiento preventivo desde cero en Crystal S.A.S., y he tenido contacto directo con los elementos que componen un programa de lubricación. Puedo describir cómo lo abordaría metodológicamente, basado en mi formación y experiencia:
+
+\begin{enumerate}[leftmargin=1.6em, itemsep=3pt]
+  \item \textbf{Inventario de activos y criticidad:} levantar el listado completo de equipos, clasificarlos por criticidad usando metodología RCM o análisis de criticidad (impacto en producción, seguridad, costo de falla).
+  \item \textbf{Recopilación de información técnica:} revisar manuales de fabricante para cada equipo —especificaciones de lubricante, viscosidad, tipo (grasa/aceite), frecuencia y cantidad—, identificar puntos de lubricación y condiciones de operación (temperatura, velocidad, carga).
+  \item \textbf{Racionalización del portafolio:} consolidar lubricantes para reducir referencias, validar equivalencias entre marcas usando tablas de cross-reference y hojas de datos técnicos.
+  \item \textbf{Diseño de rutas:} agrupar equipos geográficamente, definir frecuencias (diaria, semanal, mensual), establecer herramientas y EPP requeridos, estimar tiempos de ejecución.
+  \item \textbf{Documentación y entrenamiento:} elaborar fichas de lubricación por equipo, instrucciones de trabajo y listas de chequeo; capacitar al personal técnico.
+  \item \textbf{Medición y mejora:} definir KPIs de seguimiento (cumplimiento de rutas, consumo de lubricante, incidencias por lubricación) e implementar análisis de aceite para equipos críticos.
+\end{enumerate}
+\end{respuesta}
+
+\pregunta{¿Qué información consideras indispensable para estructurar un plan maestro de lubricación?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Por cada equipo:} ficha técnica, manual del fabricante con especificaciones de lubricante (tipo, viscosidad ISO VG o grado NLGI, aditivos requeridos), condiciones de operación (temperatura de trabajo, velocidad de giro, tipo de carga —axial, radial, choque—), capacidad del cárter o cantidad de grasa por punto, intervalo de cambio o re-engrase.
+  \item \textbf{Del proceso productivo:} condiciones ambientales (temperatura, humedad, presencia de polvo o contaminantes), régimen de operación (continuo, intermitente, turnos), accesibilidad de los puntos de lubricación.
+  \item \textbf{Del portafolio de lubricantes:} fichas de datos de seguridad y técnicas de los lubricantes aprobados, tabla de equivalencias entre marcas comerciales.
+  \item \textbf{Histórico de fallas:} registro de fallas asociadas a lubricación para identificar equipos problemáticos y ajustar frecuencias o tipos de lubricante.
+  \item \textbf{Recursos disponibles:} personal, herramientas de aplicación, sistema CMMS para programación y seguimiento.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{Describe un reto significativo que enfrentaste y cómo lo solucionaste.}
+
+\begin{respuesta}
+En Proymant, durante el mantenimiento de un ventilador de alta capacidad en la planta de Eurocerámica, identificamos desgaste prematuro en los rodamientos del eje principal después de un intervalo de operación corto. El síntoma inicial fue vibración elevada detectada en una inspección rutinaria. Al desmontar el conjunto, encontramos marcas de pitting y desgaste adhesivo en las pistas del rodamiento.
+
+El análisis de causa raíz apuntó a dos factores concurrentes: lubricación insuficiente (la frecuencia de re-engrase era menor a la recomendada por el fabricante para esa temperatura de operación) y uso de una grasa con índice de viscosidad inadecuado para las temperaturas que alcanzaba el equipo en el entorno del horno. Se corrigió la frecuencia de re-engrase y se coordinó con el área de planeación para revisar la especificación del lubricante con el proveedor, seleccionando una grasa de mayor estabilidad térmica. El seguimiento posterior no mostró recurrencia del problema.
+
+Este caso me confirmó que la lubricación no es solo una tarea operativa sino una decisión de ingeniería que requiere entender las condiciones reales de operación del equipo.
+\end{respuesta}
+
+\subsection{2.2 Planeación y configuración de rutas}
+
+\pregunta{¿Qué variables consideras para estructurar y optimizar rutas de lubricación?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Geografía y distribución de planta:} agrupar equipos por zona para minimizar desplazamientos y tiempos muertos; considerar restricciones de acceso mientras la planta opera.
+  \item \textbf{Frecuencia de intervención:} clasificar puntos por frecuencia (diaria, semanal, mensual, trimestral) y construir rutas que agrupen puntos de igual frecuencia.
+  \item \textbf{Criticidad del equipo:} los equipos más críticos deben tener rutas prioritarias y, si es posible, en ventanas de tiempo donde el impacto de una parada sea menor.
+  \item \textbf{Tipo de lubricante:} separar rutas por tipo de lubricante para evitar contaminación cruzada; nunca mezclar puntos de grasa y aceite en el mismo recorrido sin protocolo de limpieza.
+  \item \textbf{Condiciones de seguridad:} identificar equipos que requieren lockout/tagout o EPP específico; esto puede justificar rutas separadas o turnos especiales.
+  \item \textbf{Herramientas requeridas:} optimizar para que el técnico lleve el menor número de herramientas y contenedores en cada ruta.
+  \item \textbf{Tiempo de ejecución:} balancear la carga de trabajo por ruta para que sea ejecutable dentro del turno disponible.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{¿Qué herramientas has usado para planificar rutas?}
+
+\begin{respuesta}
+Mi experiencia más directa es con \textbf{Excel} para la construcción de planes de mantenimiento: matrices de equipos vs.\ frecuencias, hojas de programación semanal y mensual, y listas de chequeo. En Crystal S.A.S. tuve acceso al sistema CMMS de la empresa para la generación de órdenes de trabajo, aunque mi rol era de soporte al departamento de mantenimiento.
+
+Tengo conocimiento conceptual de herramientas como \textbf{SAP PM}, \textbf{Maximo} y \textbf{Infor EAM} como plataformas estándar de la industria para gestión de activos y planificación de rutas. Estoy en disposición de adaptarme rápidamente a cualquier CMMS que use la organización; mi formación en programación (Python, SQL) me facilita entender la estructura de datos de estos sistemas y sacarles partido analítico.
+\end{respuesta}
+
+\pregunta{¿Cómo aseguras que las rutas sean eficientes y seguras?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Eficiencia:} validar el recorrido físicamente antes de formalizar la ruta; cronometrar los tiempos de ejecución para ajustar la carga; revisar periódicamente el cumplimiento e identificar cuellos de botella.
+  \item \textbf{Seguridad:} identificar en cada punto de lubricación si el equipo debe estar detenido o puede lubricarse en marcha; señalizar los puntos de acceso restringido; incluir los EPP requeridos en la instrucción de trabajo de cada ruta; coordinar con producción las ventanas de intervención para equipos que requieren parada.
+  \item \textbf{Calidad:} especificar claramente en la hoja de ruta la cantidad exacta de lubricante, el método de aplicación y las señales de alerta (temperatura anormal, ruido, fuga). Registrar las observaciones en cada ejecución para alimentar el histórico.
+\end{itemize}
+\end{respuesta}
+
+\subsection{2.3 Conocimiento de maquinaria y procesos productivos}
+
+\pregunta{Menciona los equipos más críticos con los que has trabajado.}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Molinos de bolas} (Eurocerámica): críticos para la preparación de pastas cerámicas; operación continua, alta carga en rodamientos, temperatura elevada. Problemas de lubricación tienen impacto directo en la producción.
+  \item \textbf{Ventiladores de alta capacidad} (Eurocerámica): asociados a hornos y secadores; altas temperaturas en cojinetes, vibración como indicador clave de condición.
+  \item \textbf{Reductores de velocidad} en líneas de transporte y producción cerámica.
+  \item \textbf{Motores eléctricos} de media y alta potencia en líneas de producción textil (Crystal S.A.S.).
+  \item \textbf{Maquinaria neumática automatizada} diseñada y construida durante la práctica: sistemas con actuadores neumáticos, guías lineales y elementos de transmisión que requieren lubricación específica para su vida útil.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{¿Cómo adaptas el plan de lubricación según condiciones de operación?}
+
+\begin{respuesta}
+Las variables operativas que más impactan las decisiones de lubricación son:
+
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Temperatura:} a mayor temperatura, mayor degradación del lubricante y menor viscosidad del aceite base; se requiere un lubricante con mayor índice de viscosidad o se reduce el intervalo de cambio/re-engrase. Para grasas, la temperatura máxima de operación no debe superar el punto de goteo del espesante.
+  \item \textbf{Velocidad y carga:} el parámetro $k$ (factor de viscosidad) relaciona la viscosidad real del lubricante con la viscosidad de referencia para una velocidad dada; un $k < 1$ indica lubricación insuficiente y exige lubricante más viscoso o mayor frecuencia de engrase.
+  \item \textbf{Contaminación:} en ambientes con polvo o humedad (como en planta cerámica) se deben usar grasas con alta resistencia al agua y alta consistencia NLGI, reforzar los sellos y reducir intervalos.
+  \item \textbf{Régimen de operación:} equipos que arrancan y paran frecuentemente experimentan mayores cargas de impacto; se prefieren lubricantes con aditivos EP (extrema presión) y grasas de alta adherencia.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{Describe un caso donde detectaste una falla incipiente gracias a lubricación o análisis de aceite.}
+
+\begin{respuesta}
+En Proymant, durante una inspección de vibración de rutina en un ventilador de horno, detectamos un incremento en la amplitud de vibración en la frecuencia característica de defecto en pista externa del rodamiento (BPFO). Adicionalmente, al verificar el estado de la grasa en los cojinetes durante el siguiente mantenimiento programado, observamos decoloración (oscurecimiento) y presencia de partículas metálicas visibles, señales claras de lubricación degradada y desgaste activo.
+
+Esto nos permitió programar el cambio del rodamiento en la siguiente ventana de mantenimiento planificada, evitando una falla catastrófica en operación que habría significado una parada no programada de varios días en una línea de producción crítica. El análisis combinado de monitoreo por vibraciones e inspección del lubricante fue clave para esa decisión.
+\end{respuesta}
+
+\subsection{2.4 Selección y administración de lubricantes}
+
+\pregunta{¿Cómo seleccionas el lubricante adecuado para un equipo?}
+
+\begin{respuesta}
+El proceso de selección parte de las condiciones de operación del equipo y sigue esta lógica:
+
+\begin{enumerate}[leftmargin=1.6em, itemsep=3pt]
+  \item \textbf{Tipo de lubricante:} determinar si se requiere aceite o grasa según el diseño del sistema de lubricación (cárter, circulación, centralizada, engrase manual).
+  \item \textbf{Viscosidad:} para aceites, calcular la viscosidad cinemática requerida a temperatura de operación usando la velocidad de giro y el diámetro del rodamiento (parámetro $n \cdot d_m$); consultar tablas de fabricantes de rodamientos (SKF, FAG, Timken). La clasificación ISO VG permite seleccionar el grado adecuado.
+  \item \textbf{Consistencia (para grasas):} seleccionar el grado NLGI según velocidad, temperatura y orientación del rodamiento; NLGI 2 es el más común para rodamientos estándar.
+  \item \textbf{Tipo de espesante y aceite base:} en temperaturas extremas, polímeros sintéticos (PAO, ésteres) superan a los minerales. El espesante (litio, poliurea, bario) define la compatibilidad con otros lubricantes y la resistencia al agua.
+  \item \textbf{Aditivos requeridos:} cargas altas o choques justifican aditivos EP; ambientes húmedos requieren aditivos anticorrosión.
+  \item \textbf{Validación con fabricante:} siempre contrastar con las especificaciones del manual del equipo y, si hay duda, consultar al fabricante del rodamiento o la caja de engranajes.
+\end{enumerate}
+\end{respuesta}
+
+\pregunta{¿Cómo validas equivalencias o cambios de lubricantes?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Comparación de hojas de datos técnicos (TDS):} verificar que la viscosidad cinemática a 40°C y 100°C, el índice de viscosidad, el punto de goteo (grasas), el punto de inflamación y los aditivos del producto propuesto sean equivalentes o superiores al producto original.
+  \item \textbf{Tablas de cross-reference:} los fabricantes de lubricantes (Shell, Mobil, Castrol, Fuchs) publican tablas de equivalencias que permiten validar que su producto corresponde a la misma especificación.
+  \item \textbf{Compatibilidad de espesantes (grasas):} punto crítico; mezclar grasas con espesantes incompatibles (e.g., litio con poliurea) puede causar pérdida de consistencia y falla. Ante un cambio, se debe purgar completamente el equipo.
+  \item \textbf{Aprobación documentada:} registrar la validación, el producto original, el producto equivalente, la fuente de la equivalencia y la firma de quien aprueba. Esto protege ante auditorías y responsabilidades.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{¿Qué controles implementas para evitar contaminación cruzada?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Código de colores:} asignar un color a cada lubricante (contenedores, aceiteras, tapas de relleno, etiquetas de puntos); el técnico solo usa la herramienta del color correcto en cada punto.
+  \item \textbf{Identificación de puntos:} etiquetar cada punto de lubricación con el nombre del lubricante, viscosidad/grado, cantidad y frecuencia. Etiquetas resistentes al entorno industrial.
+  \item \textbf{Almacenamiento segregado:} mantener lubricantes en áreas separadas, identificadas, cerradas y alejadas de fuentes de calor o humedad.
+  \item \textbf{Herramientas dedicadas:} dispensadores, aceiteras y bombas de engrase exclusivos por tipo de lubricante.
+  \item \textbf{Procedimientos de llenado con filtración:} usar filtros de llenado (kidney filtration) para aceites; nunca rellenar desde recipientes sucios.
+  \item \textbf{Control de inventario:} registro de entradas y salidas de lubricantes para detectar consumos anómalos que puedan indicar mezcla o uso incorrecto.
+\end{itemize}
+\end{respuesta}
+
+\subsection{2.5 KPI e indicadores}
+
+\pregunta{¿Qué indicadores de lubricación has manejado?}
+
+\begin{respuesta}
+En mi rol de mantenimiento he trabajado principalmente con indicadores generales: \textbf{disponibilidad de equipos}, \textbf{MTBF} (tiempo medio entre fallos), \textbf{MTTR} (tiempo medio de reparación) y \textbf{cumplimiento de planes de mantenimiento preventivo} (OEE parcial).
+
+Dentro del contexto específico de lubricación, conozco los KPIs estándar de la disciplina:
+\begin{itemize}[leftmargin=1.4em, itemsep=2pt]
+  \item \textbf{Cumplimiento de rutas (\%):} órdenes de lubricación ejecutadas vs.\ programadas.
+  \item \textbf{Consumo de lubricante por equipo:} permite detectar fugas, sobre-engrase o falta de engrase.
+  \item \textbf{Número de fallas atribuibles a lubricación:} por equipo y por período.
+  \item \textbf{Costo de lubricantes por unidad producida:} indicador de eficiencia económica del programa.
+  \item \textbf{Resultados de análisis de aceite:} porcentaje de muestras dentro de especificación, tendencias de contaminación y degradación.
+\end{itemize}
+\end{respuesta}
+
+\pregunta{Ejemplo de un KPI que mejoraste y cómo lo lograste.}
+
+\begin{respuesta}
+En Crystal S.A.S., el cumplimiento del plan de mantenimiento preventivo estaba por debajo del 70\% en algunas semanas. Analizando las causas, identifiqué que una parte importante de las órdenes abiertas no se ejecutaban porque los insumos (lubricantes, filtros, repuestos menores) no estaban disponibles en el momento programado.
+
+Propuse y apoyé la implementación de un mini-stock de consumibles de alta rotación directamente en el taller de mantenimiento, con un punto de reorden definido, gestionado a través del sistema de la empresa. En las semanas siguientes el cumplimiento del PM subió al 85--90\%, con el impacto visible en la reducción de llamados por fallas en los equipos de esas líneas.
+
+La lección aplicable a lubricación es que el cumplimiento de rutas depende tanto del trabajo del lubricador como de la gestión de los insumos detrás.
+\end{respuesta}
+
+\subsection{2.6 Análisis de aceite y monitoreo predictivo}
+
+\pregunta{¿Qué parámetros analizas en un informe de aceite?}
+
+\begin{respuesta}
+Un informe de análisis de aceite bien estructurado evalúa tres grupos de parámetros:
+
+\begin{enumerate}[leftmargin=1.6em, itemsep=4pt]
+  \item \textbf{Condición del lubricante (degradación):}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1pt]
+      \item Viscosidad cinemática a 40°C y 100°C: desviaciones $> \pm 10\%$ del valor de referencia indican degradación o contaminación.
+      \item Índice de acidez (TAN) / índice de basicidad (TBN): el aumento del TAN indica oxidación; la caída del TBN indica agotamiento de aditivos.
+      \item Oxidación e nitración por FTIR: degradación química del aceite base.
+    \end{itemize}
+  \item \textbf{Contaminación:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1pt]
+      \item Contenido de agua (\%): agua libre o emulsionada es el contaminante más dañino; umbral típico $< 0.1\%$.
+      \item Código de limpieza ISO 4406: concentración de partículas por tamaño ($\geq 4\,\mu$m, $\geq 6\,\mu$m, $\geq 14\,\mu$m).
+      \item Contenido de silicio (Si): indicador de ingreso de polvo/tierra.
+    \end{itemize}
+  \item \textbf{Desgaste de componentes (ferrografía y espectrometría):}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1pt]
+      \item Metales de desgaste: hierro (Fe), cobre (Cu), aluminio (Al), cromo (Cr), plomo (Pb); cada metal señala el componente fuente de desgaste.
+      \item Metales de aditivos: zinc (Zn), fósforo (P), calcio (Ca); su consumo indica agotamiento de paquete de aditivos.
+    \end{itemize}
+\end{enumerate}
+\end{respuesta}
+
+\pregunta{¿Cómo interpretas códigos ISO de limpieza?}
+
+\begin{respuesta}
+La norma ISO 4406:2021 expresa la concentración de partículas en aceite mediante tres números separados por barras oblicuas, por ejemplo \textbf{18/16/13}, donde cada número representa un código (escala logarítmica en base 2) correspondiente al número de partículas por mililitro de tamaño $\geq 4\,\mu$m, $\geq 6\,\mu$m y $\geq 14\,\mu$m respectivamente.
+
+\begin{center}
+\begin{tabular}{>{\centering\arraybackslash}p{1.8cm} >{\raggedright\arraybackslash}p{8cm}}
+\toprule
+\textbf{Código ISO} & \textbf{Partículas/mL (rango)} \\
+\midrule
+13 & 40 -- 80 \\
+14 & 80 -- 160 \\
+16 & 320 -- 640 \\
+18 & 1300 -- 2500 \\
+20 & 5000 -- 10000 \\
+22 & 20000 -- 40000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Un rodamiento de alta velocidad típicamente requiere un nivel de limpieza de \textbf{16/14/11} o mejor. Si el informe reporta \textbf{20/18/15}, significa contaminación severa que justifica filtración o cambio del aceite.
+
+La clave práctica: cuanto \textbf{menor} el código, \textbf{más limpio} el aceite. Un incremento de un número en el código duplica la concentración de partículas.
+\end{respuesta}
+
+\pregunta{Caso donde un análisis permitió evitar una falla.}
+
+\begin{respuesta}
+En Proymant, durante el seguimiento de un molino de bolas, una muestra de aceite del reductor principal mostró un incremento sostenido de hierro (Fe) en tres muestras consecutivas —pasando de 18 a 35 a 67 ppm— sin otros cambios significativos en viscosidad ni contaminación. La tendencia ascendente era la señal de alerta: no el valor absoluto, sino el patrón.
+
+Se programó una inspección interna del reductor antes del próximo cambio de aceite. Al abrir el equipo se encontró desgaste en los flancos de los engranajes helicoildes (desgaste adhesivo incipiente), probablemente asociado a una película lubricante insuficiente bajo las cargas de proceso. Se corrigió el nivel de aceite —que estaba ligeramente por debajo del mínimo— y se ajustó la frecuencia de muestreo. El equipo continuó operando sin falla durante el resto del período de seguimiento.
+
+Este caso es un ejemplo directo del valor del análisis de aceite como herramienta predictiva: sin ese dato, la intervención habría sido reactiva y posiblemente con daño mayor en los engranajes.
+\end{respuesta}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{3. Habilidades Blandas}
+
+\pregunta{Cuéntame sobre una situación en la que lideraste personal técnico.}
+
+\begin{respuesta}
+En Proymant, como Ingeniero Residente en Eurocerámica, coordiné un equipo de técnicos de mantenimiento para la ejecución de un proyecto de cerramiento de silos bajo tiempos ajustados. El reto no era solo técnico sino de coordinación: los técnicos tenían distintos niveles de experiencia, algunos con resistencia a seguir el procedimiento documentado por considerarlo innecesario dada su experiencia empírica.
+
+Mi enfoque fue involucrarlos en la revisión del procedimiento antes de la ejecución, reconocer explícitamente su experiencia y explicar el \textit{por qué} de cada paso, especialmente los relacionados con seguridad en altura. Eso generó apropiación del procedimiento. Durante la ejecución mantuve presencia en campo, resolvía dudas técnicas en tiempo real y hacía seguimiento al avance sin microgestión. El proyecto se entregó dentro del plazo y sin incidentes de seguridad.
+\end{respuesta}
+
+\pregunta{¿Cómo manejas la resistencia al cambio?}
+
+\begin{respuesta}
+La resistencia al cambio casi siempre tiene una raíz legítima: miedo a quedar en evidencia, a perder autonomía, o a que el nuevo proceso sea más trabajo sin beneficio claro. Mi aproximación es entender esa raíz antes de insistir en el cambio.
+
+Cuando en Crystal S.A.S. propusimos cambios en la programación del mantenimiento, algunos técnicos se resistían porque sentían que los nuevos formatos de registro eran burocracia adicional. En lugar de imponer, hice una demostración corta de cómo ese registro les protegía a ellos también (si un equipo fallaba, el registro probaba que habían hecho su trabajo). Eso cambió la conversación: de ``más trabajo'' a ``herramienta de respaldo''. La adopción fue significativamente mejor que si hubiera sido una instrucción de arriba hacia abajo.
+\end{respuesta}
+
+\pregunta{¿Cómo gestionas la comunicación con producción?}
+
+\begin{respuesta}
+Producción y mantenimiento tienen objetivos que pueden tensionar: producción quiere máxima disponibilidad de equipos, mantenimiento necesita tiempo para intervenir. La clave es hablar el idioma de producción: en términos de impacto en la continuidad operativa, no en términos técnicos de mantenimiento.
+
+En la práctica, mi enfoque incluye: acordar con anticipación las ventanas de mantenimiento y cumplirlas (la confiabilidad del mantenimiento genera confianza en producción), comunicar claramente cuando se detecta un riesgo de falla inminente con datos que respalden la urgencia, y reportar los resultados de las intervenciones en términos que producción entienda (tiempo recuperado, equipos intervenidos, riesgos mitigados). La relación con producción es de socios, no de adversarios.
+\end{respuesta}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{4. Herramientas Ofimáticas y Software}
+
+\pregunta{Nivel de manejo de Excel.}
+
+\begin{respuesta}
+Nivel avanzado. Uso habitual de tablas dinámicas, fórmulas matriciales, BUSCARX/BUSCARV, funciones de estadística y texto, gráficos dinámicos y formato condicional para dashboards de mantenimiento. He construido herramientas en Excel para programación de mantenimiento, seguimiento de órdenes de trabajo y análisis de tendencias de indicadores. Tengo experiencia complementaria en Python (pandas, matplotlib) para análisis de datos de mayor volumen, lo que me permite ir más allá de las limitaciones de Excel cuando el dataset lo requiere.
+\end{respuesta}
+
+\pregunta{Uso de sistemas CMMS/EAM.}
+
+\begin{respuesta}
+He trabajado con el CMMS interno de Crystal S.A.S. para generación y seguimiento de órdenes de trabajo, y con los sistemas de planeación de Eurocerámica en el lado del cliente. Tengo conocimiento conceptual de la estructura de SAP PM (objetos técnicos, planes de mantenimiento, órdenes PM) y de plataformas como Maximo e Infor EAM. Mi formación en SQL y Python me permite integrarme rápidamente a cualquier plataforma; entiendo la estructura de datos detrás de estos sistemas, lo que facilita la extracción y análisis de información para la toma de decisiones.
+\end{respuesta}
+
+\pregunta{¿Cómo documentas las rutinas de lubricación?}
+
+\begin{respuesta}
+La documentación de rutinas de lubricación debe ser \textit{operativa} —suficientemente clara para que cualquier técnico la ejecute correctamente— e \textit{histórica} —suficientemente estructurada para permitir análisis de tendencias. Mi esquema incluye:
+
+\begin{itemize}[leftmargin=1.4em, itemsep=2pt]
+  \item \textbf{Ficha de lubricación por equipo:} tag del equipo, punto de lubricación, tipo y referencia de lubricante, cantidad, frecuencia, método de aplicación, observaciones de seguridad.
+  \item \textbf{Lista de chequeo de ruta:} formato de campo con casillas de verificación, espacio para cantidad aplicada real y campo de observaciones por punto.
+  \item \textbf{Registro en CMMS:} cierre de la orden de trabajo con fecha, ejecutor, lubricante usado y novedades. Este registro es el insumo para el análisis de KPIs.
+  \item \textbf{Historial de análisis de aceite:} base de datos con resultados por equipo y fecha, que permite identificar tendencias y correlacionar con eventos de mantenimiento.
+\end{itemize}
+\end{respuesta}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{5. Certificaciones}
+
+\pregunta{¿Tienes certificaciones ICML?}
+
+\begin{respuesta}
+Actualmente no cuento con certificación ICML (MLT I ni MLA I). Sin embargo, tengo conciencia clara de la importancia de estas certificaciones para validar el conocimiento en lubricación industrial y es un objetivo de desarrollo profesional que planeo materializar en el corto plazo.
+
+Mi base técnica en tribología, mecánica de máquinas, análisis de señales y fluidos me da una preparación sólida para abordar el contenido del examen MLT I (Machinery Lubrication Technician) y MLA I (Machinery Lubrication Analyst), que cubre precisamente las áreas de selección de lubricantes, propiedades físico-químicas, análisis de aceite e implementación de programas.
+\end{respuesta}
+
+\pregunta{¿Qué conocimientos avanzados tienes aunque no estés certificado?}
+
+\begin{respuesta}
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Tribología:} fricción, desgaste, lubricación en régimen límite, mixto e hidrodinámico; curva de Stribeck; elastohidrodinámica (EHD) en rodamientos.
+  \item \textbf{Reología de lubricantes:} viscosidad dinámica y cinemática, índice de viscosidad, comportamiento no newtoniano de las grasas, efecto de temperatura y presión sobre la viscosidad (ecuación de Walther, presión-viscosidad de Barus).
+  \item \textbf{Análisis de aceite:} interpretación de parámetros de degradación, contaminación y desgaste; códigos ISO 4406; análisis por FTIR; espectrometría de emisión atómica para metales de desgaste.
+  \item \textbf{Rodamientos:} cargas axiales, radiales y combinadas; vida de rodamiento (L10, cálculo SKF); modos de falla (fatiga, desgaste, corrosión, falsa brinelación); análisis de frecuencias características (BPFO, BPFI, BSF, FTF) por vibraciones.
+  \item \textbf{Equipos de proceso:} comportamiento tribológico de molinos, ventiladores, compresores y cajas de engranajes bajo distintas condiciones operativas.
+  \item \textbf{Normas:} ISO 4406 (limpieza de aceite), ISO 4628 (degradación de recubrimientos), conceptos de ISO 55001 (gestión de activos) y marcos de confiabilidad RCM y RBM.
+\end{itemize}
+\end{respuesta}
+
+%% ════════════════════════════════════════════════════════════════════════════
+\section{6. Pruebas Técnicas}
+
+\subsection{Caso práctico: selección de lubricante para motor eléctrico}
+
+\begin{tip}
+\textbf{Enunciado típico:} Motor eléctrico de 75 kW, velocidad 1800 RPM, rodamientos de bolas 6314 (diámetro de paso $d_m = 105\,\text{mm}$), temperatura de operación estimada 70°C, ambiente con polvo moderado. Seleccionar lubricante y justificar.
+\end{tip}
+
+\begin{respuesta}
+\textbf{Paso 1: Cálculo del parámetro de velocidad}
+
+$$n \cdot d_m = 1800\,\text{RPM} \times 105\,\text{mm} = 189{,}000\,\text{mm·RPM}$$
+
+Este valor indica velocidad \textit{media-alta} para el rodamiento.
+
+\textbf{Paso 2: Viscosidad de referencia a temperatura de operación}
+
+Con $n \cdot d_m \approx 190{,}000$ y temperatura de operación de 70°C, las tablas SKF/ISO indican una viscosidad de referencia $\nu_1 \approx 12\,\text{mm}^2/\text{s}$ (cSt) a 70°C. Para una película lubricante adecuada, se recomienda trabajar con $\nu / \nu_1 \geq 1$ (factor $k \geq 1$), lo que implica seleccionar un lubricante con viscosidad real $\geq 12\,\text{cSt}$ a 70°C.
+
+\textbf{Paso 3: Selección del grado ISO VG}
+
+Una grasa de base mineral ISO VG 100 tiene una viscosidad típica a 70°C de aprox.\ 22--28 cSt, lo que garantiza $k > 1$. Una ISO VG 68 estaría en el límite; se descarta.
+
+\textbf{Paso 4: Tipo de lubricante y espesante}
+
+Motor eléctrico estándar, rodamiento de bolas, temperatura moderada: \textbf{grasa NLGI 2, base mineral o PAO, espesante de litio o litio complejo}. En ambiente con polvo moderado, se prefiere litio complejo por mayor resistencia a la contaminación.
+
+\textbf{Selección final:} Grasa NLGI 2, litio complejo, aceite base ISO VG 100, punto de goteo $> 250°C$. Ejemplos comerciales: Mobilith SHC 100, Shell Gadus S3 V220C 2, Fuchs Renolit LX-PU 2.
+
+\textbf{Cantidad y frecuencia:} Para rodamiento 6314 (diámetro exterior $\approx 150\,\text{mm}$), la cantidad típica de re-engrase por la fórmula $G = 0.005 \times D \times B$ resulta en aprox.\ 5--7 g. Frecuencia de re-engrase a 70°C y 1800 RPM: según tablas SKF, aprox.\ 1500--2000 horas de operación.
+\end{respuesta}
+
+\subsection{Optimización de ruta de lubricación}
+
+\begin{tip}
+\textbf{Enunciado típico:} Se tienen 40 puntos de lubricación distribuidos en una nave de 120 m × 60 m, con 4 tipos de lubricante. La ruta actual tarda 6 horas. Reducirla a 4 horas manteniendo la calidad.
+\end{tip}
+
+\begin{respuesta}
+\textbf{Análisis inicial:}
+\begin{enumerate}[leftmargin=1.6em, itemsep=2pt]
+  \item Mapear todos los puntos en un plano de planta e identificar el recorrido actual.
+  \item Medir los tiempos reales por punto: tiempo de desplazamiento, tiempo de preparación (limpiar nipple, cambiar aceitera), tiempo de aplicación, tiempo de registro.
+  \item Identificar los \textit{puntos problema}: los que consumen tiempo desproporcionado (acceso difícil, herramienta equivocada, confusión sobre el lubricante).
+\end{enumerate}
+
+\textbf{Acciones de optimización:}
+\begin{itemize}[leftmargin=1.4em, itemsep=2pt]
+  \item \textbf{Reordenar el recorrido} usando un algoritmo de vecino más cercano: eliminar zigzags, agrupar por zonas, minimizar retrocesos.
+  \item \textbf{Eliminar confusión de lubricantes:} código de colores en todos los puntos y herramientas; el técnico no pierde tiempo verificando qué lubricante corresponde.
+  \item \textbf{Pre-armar el kit de ruta:} dispensadores precargados, etiquetados y verificados antes de salir al campo; no hacer viajes al almacén en medio de la ruta.
+  \item \textbf{Registro digital en campo:} usar tablet o teléfono con aplicación simple en lugar de papel + transcripción posterior; elimina el doble trabajo.
+  \item \textbf{Revisar puntos de acceso:} instalar extensiones de engrase o puntos de acceso remoto en equipos que requieren desmontaje de guardas para llegar al nipple.
+\end{itemize}
+
+\textbf{Resultado esperado:} Reducción de tiempo de desplazamiento en 30--40\% con reordenamiento de recorrido, y reducción de tiempo de preparación/registro en 20--25\% con las medidas de estandarización. Factible alcanzar el objetivo de 4 horas.
+\end{respuesta}
+
+\subsection{Interpretación de análisis de aceite con parámetros simulados}
+
+\begin{tip}
+\textbf{Enunciado simulado:} Aceite de reductor de engranajes, muestra tomada a 2000 horas de operación desde el último cambio.
+\end{tip}
+
+\begin{center}
+\small
+\begin{tabular}{lrrrc}
+\toprule
+\textbf{Parámetro} & \textbf{Resultado} & \textbf{Referencia} & \textbf{Límite acción} & \textbf{Estado} \\
+\midrule
+Viscosidad a 40°C (cSt) & 95 & 100 & $< 85$ o $> 115$ & \textcolor{green!60!black}{\textbf{Normal}} \\
+TAN (mgKOH/g) & 1.8 & 0.8 (nuevo) & $> 2.0$ & \textcolor{orange}{\textbf{Precaución}} \\
+Contenido de agua (\%) & 0.08 & $< 0.05$ & $> 0.10$ & \textcolor{orange}{\textbf{Precaución}} \\
+Código ISO & 20/17/14 & 17/15/12 & $> 19/-/-$ & \textcolor{red}{\textbf{Acción}} \\
+Hierro Fe (ppm) & 48 & $< 20$ & $> 40$ & \textcolor{red}{\textbf{Acción}} \\
+Cobre Cu (ppm) & 12 & $< 15$ & $> 20$ & \textcolor{green!60!black}{\textbf{Normal}} \\
+Silicio Si (ppm) & 22 & $< 10$ & $> 15$ & \textcolor{red}{\textbf{Acción}} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{respuesta}
+\textbf{Diagnóstico:}
+
+El aceite presenta tres señales de alerta simultáneas que configuran un cuadro de \textbf{contaminación con desgaste activo}:
+
+\begin{itemize}[leftmargin=1.4em, itemsep=3pt]
+  \item \textbf{Silicio elevado (22 ppm):} ingreso de partículas de polvo o tierra al sistema; probable falla de sello o respiradero del reductor. El silicio es el indicador más importante aquí porque es la \textit{causa raíz} del resto de los problemas.
+  \item \textbf{Código ISO 20/17/14:} concentración de partículas muy superior al objetivo; directamente relacionado con el ingreso de contaminante externo (Si) y con las partículas de desgaste (Fe).
+  \item \textbf{Hierro elevado (48 ppm) con tendencia al alza:} desgaste de engranajes o rodamientos del reductor; el aceite contaminado con partículas duras (silicio) actúa como abrasivo y acelera el desgaste.
+  \item \textbf{TAN en precaución (1.8):} oxidación incipiente del aceite; el agua y las partículas catalizan la oxidación.
+  \item \textbf{Agua en precaución (0.08\%):} posible condensación o ingreso de humedad; refuerza el diagnóstico de falla de sello.
+\end{itemize}
+
+\textbf{Acciones recomendadas:}
+\begin{enumerate}[leftmargin=1.6em, itemsep=2pt]
+  \item \textbf{Acción inmediata:} inspeccionar sellos y respiradero del reductor para identificar y corregir la vía de ingreso de contaminante.
+  \item \textbf{Filtración de emergencia (kidney loop):} pasar el aceite por filtro de 3--6 micrones para reducir la carga de partículas sin cambio de aceite inmediato.
+  \item \textbf{Cambio de aceite anticipado:} dado el nivel de TAN y la contaminación acumulada, programar cambio de aceite antes del intervalo normal.
+  \item \textbf{Inspección de engranajes:} en la próxima ventana de mantenimiento, verificar el estado superficial de los flancos.
+  \item \textbf{Aumentar frecuencia de muestreo:} pasar a muestreo mensual hasta que los parámetros se estabilicen dentro de los límites.
+\end{enumerate}
+\end{respuesta}
+
+\vspace{10pt}
+\noindent\rule{\linewidth}{0.8pt}
+\begin{center}
+\small\color{muted}
+Mauricio Ríos Hernández · \href{mailto:mrioshe17@outlook.com}{mrioshe17@outlook.com} · +57 312 649 7849 · \href{https://www.linkedin.com/in/mrioshe17/}{linkedin.com/in/mrioshe17}
+\end{center}
+
+\end{document}

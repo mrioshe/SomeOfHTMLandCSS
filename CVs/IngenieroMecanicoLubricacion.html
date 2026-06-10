@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mauricio Ríos Hernández — Ingeniero Mecánico — CV Lubricación</title>
+  <style>
+    :root{
+      --accent:#0b6bd6;
+      --muted:#666;
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --maxw:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+      padding:24px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      max-width:var(--maxw);
+      width:100%;
+      background:var(--card);
+      box-shadow:0 8px 24px rgba(20,20,40,0.08);
+      border-radius:10px;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+    }
+    header{
+      grid-column:1 / -1;
+      display:flex;
+      gap:18px;
+      padding:28px;
+      align-items:center;
+      border-bottom:1px solid #eee;
+    }
+    .photo{
+      width:96px;height:96px;border-radius:8px;background:#e9eef8;
+      display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);
+      overflow:hidden;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block;}
+    .title h1{margin:0;font-size:20px;}
+    .title p{margin:4px 0 0;color:var(--muted);font-size:14px;}
+    .left{
+      padding:22px;
+      border-right:1px solid #f0f0f0;
+      background:linear-gradient(180deg, rgba(11,107,214,0.03), transparent);
+    }
+    .right{padding:22px;}
+    .section{margin-bottom:18px;}
+    .section h3{margin:0 0 10px;font-size:13px;color:var(--accent);letter-spacing:0.6px;}
+    .contact p, .small{font-size:14px;color:var(--muted);margin:6px 0;}
+    ul{margin:6px 0 12px 18px;}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px;}
+    .skill{background:#eef6ff;padding:6px 10px;border-radius:999px;font-size:13px;color:#033a66;}
+    .experience-item{margin-bottom:12px;}
+    .meta{font-size:13px;color:var(--muted);}
+    footer{padding:18px;border-top:1px solid #eee;font-size:13px;color:var(--muted);text-align:center;}
+    a{color:var(--accent);text-decoration:none;}
+    @media (max-width:800px){
+      .container{grid-template-columns:1fr; padding:0;}
+      .left{border-right:none;border-bottom:1px solid #f0f0f0;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="photo" aria-hidden="true">
+        <!-- PLACEHOLDER FOR PHOTO: replace src with the candidate photo path -->
+         <img src="CVphoto.png" alt="Mauricio Ríos Hernández">
+      </div>
+      <div class="title">
+        <h1>Mauricio Ríos Hernández</h1>
+        <p><b>Ingeniero Mecánico</b> • Lubricación Industrial • Mantenimiento Predictivo y Preventivo • Confiabilidad de Activos</p>
+        <p class="meta">• Tribología y análisis de Aceite • Diseño mecánico • CAD & FEA • Automatización • Instrumentación • DataScience</p>
+      </div>
+    </header>
+
+    <!-- LEFT COLUMN -->
+    <aside class="left" aria-label="Contacto y habilidades">
+      <section class="section contact">
+        <h3>Contacto</h3>
+        <p class="small"><b>Email:</b> <a href="mailto:mrioshe17@outlook.com">mrioshe17@outlook.com</a></p>
+        <p class="small"><b>Teléfono:</b> +57 312 6497849</p>
+        <p class="small"><b>Ubicación:</b> Antioquia, Colombia</p>
+        <p class="small"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mrioshe17/" target="_blank" rel="noopener">linkedin.com/in/mrioshe17</a></p>
+        <p class="small"><b>GitHub:</b> <a href="https://github.com/mrioshe" target="_blank" rel="noopener">github.com/mrioshe</a></p>
+        <p class="small"><b>GrabCAD:</b> <a href="https://grabcad.com/mauricio.rios.hernandez-5" target="_blank" rel="noopener">grabcad.com/mauricioRios</a></p>
+      </section>
+
+      <section class="section">
+        <h3>Habilidades técnicas</h3>
+        <div class="skill-list">
+          <span class="skill"><b>Lubricación:</b> · Tribología · Selección de lubricantes · Análisis de aceite · Rutas de lubricación · Gestión de almacén</span>
+          <span class="skill"><b>Mantenimiento:</b> · Predictivo · Preventivo · Correctivo · TPM · RCM </span>
+          <span class="skill"><b>Monitoreo de condición:</b> · Vibraciones · Termografía · Análisis de aceite · KPIs de mantenimiento</span>
+          <span class="skill"><b>CADs:</b> · Inventor · SolidWorks · Fusion · AutoCAD</span>
+          <span class="skill"><b>FEA y MVF:</b> ANSYS</span>
+          <span class="skill"><b>Programación:</b> · Python · MATLAB · LabVIEW · SQL · C & C++ · R · LaTeX · EES</span>
+          <span class="skill"><b>MCUs / Automatización:</b> · STM32 · Arduino · ESP32 · TIA Portal · ISPSoft</span>
+          <span class="skill"><b>Office & reportes:</b> · Excel · Word · Power Point · Access</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Idiomas y movilidad</h3>
+        <p class="small"><strong>Español:</strong> Nativo</p>
+        <p class="small"><strong>Inglés:</strong> B2  — lectura técnica fluida</p>
+        <p class="small"><strong>Licencias de conducción:</strong> A2 & B1 · Vehículo propio · Disponibilidad total</p>
+      </section>
+
+      <section class="section">
+        <h3>Formación</h3>
+
+        <div class="experience-item">
+          <strong>Ingeniería Mecánica</strong>
+          <div class="meta">Universidad de Antioquia · Feb 2017 – Sep 2024</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>(En curso) — Ingeniería Física</strong>
+          <div class="meta">Universidad Nacional de Colombia · Ago 2020 – Presente</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>(En curso) — Applied Data Science with Python Specialization</strong>
+          <div class="meta">Online Coursera Specialization · University of Michigan</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>Técnico — Programación de Software</strong>
+          <div class="meta">Servicio Nacional de Aprendizaje (SENA) · Ene 2015 – Nov 2016</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Referencias</h3>
+
+        <div class="experience-item">
+          <strong>Juan Manuel Muñoz Manrique</strong>
+          <div class="meta">Ingeniero PDM y confiabilidad — SKF</div>
+          <div class="meta">Teléfono: 320 233 8146</div>
+        </div>
+
+        <div class="experience-item">
+          <strong>Andrés Vargas Jaramillo</strong>
+          <div class="meta">Jefe de departamento planeación de mantenimiento — Eurocerámica</div>
+          <div class="meta">Teléfono: 317 655 1396</div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="right">
+      <section class="section">
+        <h3>Resumen profesional</h3>
+        <p style="text-align: justify;">
+          Ingeniero Mecánico con experiencia en entornos industriales de manufactura y producción continua, 
+          con participación activa en departamentos de mantenimiento preventivo, predictivo y correctivo.
+           Sólida base técnica en tribología, mecánica de máquinas, análisis de fallas y comportamiento 
+           de materiales bajo esfuerzos dinámicos y térmicos. Experiencia práctica en la lectura e interpretación
+            de manuales de lubricación de equipos rotativos, identificación de modos de falla asociados a lubricación 
+            deficiente en rodamientos, molinos de bolas y ventiladores de alta capacidad, y contacto directo con la 
+            planificación de rutinas de mantenimiento usando metodologías TPM. Alta disposición para absorber 
+            conocimiento y desempeñar el cargo con rigor técnico, enfoque en confiabilidad de activos y compromiso
+             con los estándares de seguridad y calidad aplicables.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3>Experiencia profesional</h3>
+
+        <div class="experience-item">
+          <strong>Ingeniero Residente y Jefe de Proyectos Mecánicos</strong>
+          <div class="meta">Proymant Proyectos y Mantenimientos S.A.S. · Ago 2024 – Presente</div>
+          <ul>
+            <li>Coordinar y ejecutar planes de mantenimiento preventivo y correctivo en la planta de producción, 
+               cerámicos de Eurocerámica, con contacto directo con 
+              el departamento de planeación y confiabilidad.</li>
+            <li>Levantamiento de información técnica de maquinaria (molinos de bolas, ventiladores de alta capacidad,
+               transportadores y equipos rotativos), incluyendo lectura de manuales y especificaciones de lubricación
+                de fabricante.</li>
+            <li>Diagnóstico de fallas en equipos rotativos con foco en análisis de causa raíz; identificación de modos
+               de falla asociados a lubricación deficiente, contaminación y sobrecarga en rodamientos de cargas 
+               axiales y radiales.</li>
+            <li>Coordinación con el área de planeación de mantenimiento para la programación y seguimiento de actividades, 
+              contribuyendo al cumplimiento de indicadores de disponibilidad y confiabilidad de los activos.</li>
+            <li>Brindar soporte técnico en dibujo, cálculo y simulación FEA para la toma de decisiones
+               en intervenciones sobre equipos críticos.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Practicante en Ingeniería Mecánica — Departamento de Mantenimiento</strong>
+          <div class="meta">Crystal S.A.S. · Feb 2024 – Ago 2024</div>
+          <ul>
+            <li>Apoyar tareas del departamento de mantenimiento: programación de planes de mantenimiento preventivo,
+               gestión de recursos, seguimiento a rutinas y órdenes de trabajo.</li>
+            <li>Participar en inspecciones de equipos de producción aplicando técnicas de monitoreo de condición
+               (vibraciones, termografía) para la detección temprana de fallas incipientes.</li>
+            <li>Apoyar la implementación de metodología TPM para mejorar la disponibilidad de equipos
+               en líneas de producción textil.</li>
+            <li>Diseñar y construir maquinaria de producción semiautomática 
+              (etiquetadoras, plastiflechadoras, marquilladoras), con diseño detallado en CAD 
+              y validación mediante simulación de elementos finitos.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Proyectos de ingeniería independientes — Instrumentación y control</strong>
+          <ul>
+            <li>Desarrollo de un sensor capacitivo para medir y controlar nivel de fluido en tanque: diseño del circuito de acondicionamiento, calibración y validación del sistema de medición, con aplicación directa a monitoreo de nivel de lubricante.</li>
+            <li>Desarrollo de control PID de temperatura con ESP32 para módulo de calentamiento de prensa de sublimación: experiencia en control de parámetros de proceso críticos para la viscosidad y desempeño de fluidos.</li>
+            <li>Diseño y construcción de una grabadora CNC láser: proyecto integrador que cubre diseño mecánico, electrónica de potencia, firmware embebido y comunicación inalámbrica.</li>
+            <li>Modulador/demodulador AM con ESP32 y Python: implementación de sistema de adquisición y visualización de señales para diagnóstico de equipos.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <strong>Tutor y monitor de laboratorio de Física de Electricidad y Magnetismo</strong>
+          <div class="meta">Universidad Nacional de Colombia · Feb 2023 – Nov 2023</div>
+          <ul>
+            <li>Impartir instrucción teórica y acompañar a los estudiantes en prácticas experimentales
+              , desarrollando habilidades de comunicación técnica y liderazgo de grupos.</li>
+            <li>Reparar y mantener equipos de laboratorio, contribuyendo al diseño de nuevas
+               prácticas experimentales.</li>
+          </ul>
+        </div>
+
+      </section>
+
+
+
+    </main>
+  </div>
+</body>
+</html>

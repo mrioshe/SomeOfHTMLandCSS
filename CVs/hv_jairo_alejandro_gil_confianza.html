@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HV - Jairo Alejandro Gil Mancipe</title>
+  <style>
+    :root{
+      --paper: #ffffff;
+      --ink: #1c232b;
+      --muted: #5d6773;
+      --line: #d7dde5;
+      --dark: #0f1720;
+      --dark-2: #151f2b;
+      --accent: #2b6cb0;
+      --accent-soft: #eaf2fb;
+      --soft: #f7f9fc;
+      --shadow: 0 16px 40px rgba(15, 23, 32, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #e9edf2;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .sheet{
+      width: 8.5in;
+      height: 11in;
+      margin: 18px auto;
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 32% 68%;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border-radius: 18px;
+    }
+
+    .sidebar{
+      background: linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 100%);
+      color: #f4f7fb;
+      padding: 18px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .photo-wrap{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 0 4px;
+    }
+
+    .photo-ring{
+      width: 1.85in;
+      height: 1.85in;
+      border-radius: 50%;
+      background: #ffffff;
+      padding: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+      flex: 0 0 auto;
+    }
+
+    .photo-frame{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      transform: scale(1.08);
+      display: block;
+    }
+
+    .sidebar-block{
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 12px 12px 10px;
+    }
+
+    .sidebar-title{
+      margin: 0 0 10px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .sidebar-title::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 46px;
+      height: 2px;
+      background: rgba(255,255,255,.92);
+      border-radius: 999px;
+    }
+
+    .contact-item{
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 8px;
+      align-items: center;
+      margin: 8px 0;
+      font-size: 11.5px;
+      line-height: 1.25;
+      color: #f2f5f9;
+    }
+
+    .icon{
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      opacity: .96;
+    }
+
+    .ref-list{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .ref-item{
+      padding: 9px 10px 8px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .ref-name{
+      display:block;
+      font-size: 11.5px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .ref-role,
+    .ref-phone{
+      display:block;
+      font-size: 11px;
+      color: rgba(245,248,252,.90);
+      line-height: 1.25;
+    }
+
+    .main{
+      background: #fff;
+      padding: 18px 20px 16px 18px;
+      overflow: hidden;
+    }
+
+    .header{
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1f2933;
+      margin-bottom: 10px;
+    }
+
+    .name{
+      font-size: 31px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: .2px;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+
+    .role{
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #1f2933;
+      padding: 6px 10px;
+      border: 2px solid #1f2933;
+      border-radius: 999px;
+      background: #f9fbfd;
+    }
+
+    .section{
+      margin-top: 10px;
+      padding-top: 8px;
+    }
+
+    .section-title{
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .2px;
+      color: #15202b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before{
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex: 0 0 auto;
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+
+    .summary{
+      font-size: 11.5px;
+      line-height: 1.42;
+      color: #222b34;
+      text-align: justify;
+      margin: 0 0 6px;
+    }
+
+    .timeline{
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 8px 10px;
+      align-items: start;
+    }
+
+    .year{
+      font-size: 11px;
+      font-weight: 900;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid #d9e8f7;
+      padding: 6px 6px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .job-card{
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px 7px;
+    }
+
+    .job-title{
+      margin: 0 0 3px;
+      font-size: 11.8px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #15202b;
+    }
+
+    .job-sub{
+      margin: 0;
+      font-size: 10.5px;
+      line-height: 1.35;
+      color: #28333d;
+      text-align: justify;
+    }
+
+    .edu-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .edu-item{
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+    }
+
+    .edu-item strong{
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      color: #15202b;
+    }
+
+    .edu-item span{
+      display: block;
+      font-size: 10.5px;
+      line-height: 1.3;
+      color: #394550;
+    }
+
+    .skills{
+      columns: 2;
+      column-gap: 18px;
+      margin: 0;
+      padding-left: 18px;
+      font-size: 10.5px;
+      line-height: 1.38;
+      color: #28333d;
+    }
+
+    .skills li{
+      margin: 0 0 4px;
+      break-inside: avoid;
+    }
+
+    .langs{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .lang-item{
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #23303b;
+    }
+
+    .small-note{
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: #f6f8fb;
+      border: 1px dashed #cfd8e3;
+      border-radius: 12px;
+      font-size: 9.5px;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 0.25in;
+    }
+
+    @media print{
+      html, body{
+        background: #fff !important;
+      }
+
+      body{
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .sheet{
+        width: 8in;
+        height: 10.5in;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        page-break-after: avoid;
+        page-break-before: avoid;
+        page-break-inside: avoid;
+      }
+
+      .sidebar,
+      .main{
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 1320px){
+      .sheet{
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        border-radius: 0;
+      }
+
+      .sidebar{
+        align-items: center;
+      }
+
+      .sidebar-block{
+        width: 100%;
+        max-width: 760px;
+      }
+
+      .photo-ring{
+        width: 180px;
+        height: 180px;
+      }
+
+      .main{
+        padding: 18px 16px 16px;
+      }
+
+      .skills{
+        columns: 1;
+      }
+
+      .edu-grid,
+      .langs{
+        grid-template-columns: 1fr;
+      }
+
+      .timeline{
+        grid-template-columns: 1fr;
+      }
+
+      .year{
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <aside class="sidebar">
+      <div class="photo-wrap">
+        <div class="photo-ring">
+          <div class="photo-frame">
+            <img class="photo" src="FotoJairo.png" alt="Foto de perfil de Jairo Alejandro Gil Mancipe">
+          </div>
+        </div>
+      </div>
+
+      <section class="sidebar-block">
+        <h3 class="sidebar-title">Contacto</h3>
+        <div class="contact-item"><div class="icon">☎</div><div>3227531560</div></div>
+        <div class="contact-item"><div class="icon">✉</div><div>Alejogilm14@gmail.com</div></div>
+        <div class="contact-item"><div class="icon">📍</div><div>Carrera 64 #78a-40</div></div>
+      </section>
+
+      <section class="sidebar-block">
+        <h3 class="sidebar-title">Referencias</h3>
+        <ul class="ref-list">
+          <li class="ref-item">
+            <span class="ref-name">Juan Pablo Santana Morales</span>
+            <span class="ref-role">Ingeniero Civil</span>
+            <span class="ref-phone">3123222390</span>
+          </li>
+          <li class="ref-item">
+            <span class="ref-name">Santiago Mayorga Sanchez</span>
+            <span class="ref-role">Ingeniero Eléctrico</span>
+            <span class="ref-phone">3024759710</span>
+          </li>
+          <li class="ref-item">
+            <span class="ref-name">Sergio Alejandro Martin Vergara</span>
+            <span class="ref-role">Ingeniero Eléctrico</span>
+            <span class="ref-phone">3124866278</span>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="main">
+      <div class="header">
+        <h1 class="name">JAIRO ALEJANDRO<br>GIL MANCIPE</h1>
+        <div class="role">Ingeniero Eléctrico </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Sobre mí</h2>
+        <p class="summary">
+          Ingeniero eléctrico con experiencia en mantenimiento preventivo, predictivo y correctivo de subestaciones, equipos y sistemas eléctricos en entornos industriales. He participado en inspecciones termográficas, pruebas eléctricas de campo, supervisión de mantenimiento y elaboración de informes técnicos, apoyando la toma de decisiones sobre condición de activos y oportunidades de intervención. Mi perfil combina análisis técnico, orden documental, trabajo en campo y coordinación con equipos de mantenimiento y operación, aportando valor en actividades relacionadas con confiabilidad y mantenimiento predictivo.
+          Me adapto con facilidad a rutinas de inspección, registro de hallazgos, seguimiento de desviaciones y priorización de acciones; además, tengo interés en fortalecerme en técnicas predictivas complementarias y en el uso de herramientas de gestión de mantenimiento.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experiencia</h2>
+        <div class="timeline">
+          <div class="year">2013-2014</div>
+          <div class="job-card">
+            <div class="job-title">Termo Yopal</div>
+            <p class="job-sub">Desmonte, montaje, inspección y ajuste de módulos de generación eléctrica, verificación de condiciones operativas, detección temprana de desviaciones y aseguramiento de la continuidad y confiabilidad del sistema.</p>
+          </div>
+
+          <div class="year">2024-2025</div>
+          <div class="job-card">
+            <div class="job-title">Genelec de Colombia</div>
+            <p class="job-sub">
+Ingeniero eléctrico con participación en mantenimiento de subestaciones eléctricas de media y baja tensión, elaboración de informes de inspección termográfica, pruebas de resistencia de aislamiento a transformadores de potencia, mantenimiento de grupos de medida de media tensión, inspección de tierras y supervisión de la instalación de sistemas de protección contra rayos. Apoyo en el análisis de parámetros eléctricos y en la documentación técnica asociada a mantenimiento industrial.
+            </p>
+          </div>
+
+          <div class="year">2025</div>
+          <div class="job-card">
+            <div class="job-title">Powel Ingeniería</div>
+            <p class="job-sub">Residente de obra eléctrico con participación en actividades de mantenimiento preventivo y correctivo de sistemas de generación, inspecciones predictivas mediante termografía, atención de fallas en líneas de media tensión y apoyo en subestaciones eléctricas, orientado a la disponibilidad y confiabilidad de los activos.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Educación</h2>
+        <div class="edu-grid">
+          <div class="edu-item">
+            <strong>Bachiller Técnico Industrial</strong>
+            <span>Instituto Técnico Industrial “Rafael Reyes”</span>
+          </div>
+          <div class="edu-item">
+            <strong>Ingeniero Eléctrico</strong>
+            <span>Universidad Distrital “Francisco José de Caldas”</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Habilidades</h2>
+        <ul class="skills">
+          <li>Inspección termográfica.</li>
+          <li>Pruebas eléctricas de campo.</li>
+          <li>Subestaciones MT/BT.</li>
+          <li>Lectura de parámetros eléctricos.</li>
+          <li>Supervisión de mantenimiento.</li>
+          <li>Gestión documental.</li>
+          <li>RETIE y NTC 2050.</li>
+          <li>Diagramas unifilares.</li>
+          <li>Calidad de potencia.</li>
+          <li>Trabajo en plantas industriales.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="langs">
+          <div class="lang-item">Español</div>
+          <div class="lang-item">Inglés básico</div>
+        </div>
+      </section>
+
+      <div class="small-note">
+        Versión optimizada para impresión en una sola hoja carta desde el navegador.
+      </div>
+    </main>
+  </div>
+</body>
+</html>

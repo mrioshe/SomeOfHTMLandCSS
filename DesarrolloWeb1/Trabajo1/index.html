@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- formulario solicitud de datos para campos de cliente y producto -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Mauricio Ríos Hernández">
+        <meta name="description" content="Custom Line es un negocio creativo especializado en ropa 
+                                        personalizada y objetos únicos hechos a tu medida.
+                                         Diseñamos y producimos estampados, sublimados, cortes
+                                          láser e impresión 3D para dar vida a prendas, mugs, llaveros,
+                                           tote bags, posillos y mucho más. Aquí cada detalle 
+                                           se convierte en una pieza original que refleja tu estilo,
+                                            tu marca o tu idea.">
+
+        <title>CUSTOM LINE: PRODUCTOS PERSONALIZADOS</title>
+
+        <style>
+
+            select{
+                color: black;
+                background-color: white;
+            }
+
+            select option{
+                color: black;
+                background-color: white;
+            }
+
+
+
+            :root{
+                --bg: #0b0f14;
+                --card: rgba(18, 24, 36, 0.96);
+                --card-2: rgba(23, 30, 43, 0.98);
+                --text: #f4f7fb;
+                --muted: #a9b3c1;
+                --border: rgba(255,255,255,0.10);
+                --orange: #ff8a00;
+                --pink: #ff4fd8;
+                --blue: #2bbcff;
+                --shadow: 0 12px 30px rgba(0,0,0,0.35);
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                color: var(--text);
+                background:
+                    radial-gradient(circle at top left, rgba(255,138,0,0.16), transparent 28%),
+                    radial-gradient(circle at top right, rgba(255,79,216,0.12), transparent 25%),
+                    radial-gradient(circle at bottom center, rgba(43,188,255,0.10), transparent 30%),
+                    var(--bg);
+                padding: 30px 16px;
+            }
+
+            h2{
+                text-align: center;
+                margin: 0 0 10px 0;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            h3{
+                text-align: center;
+                margin: 0 0 24px 0;
+                font-size: 1.2rem;
+                color: var(--muted);
+                font-weight: 600;
+            }
+
+            #formulario_n01{
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 28px;
+                border: 1px solid var(--border);
+                border-radius: 22px;
+                background: linear-gradient(180deg, var(--card), rgba(11,15,20,0.96));
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(8px);
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px 20px;
+            }
+
+            .campo{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .campo p{
+                margin: 0;
+                font-size: 0.95rem;
+                font-weight: 700;
+                color: var(--text);
+            }
+
+            .campo input,
+            .campo select,
+            .campo textarea{
+                width: 100%;
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                background: linear-gradient(180deg, var(--card), var(--card-2));
+                color: var(--text);
+                padding: 12px 14px;
+                font-size: 0.98rem;
+                outline: none;
+                transition: 0.25s ease;
+            }
+
+            .campo input::placeholder,
+            .campo textarea::placeholder{
+                color: #7f8a99;
+            }
+
+            .campo input:focus,
+            .campo select:focus,
+            .campo textarea:focus{
+                border-color: rgba(255,138,0,0.65);
+                box-shadow: 0 0 0 4px rgba(255,138,0,0.12);
+                transform: translateY(-1px);
+            }
+
+            .campo input[type="color"]{
+                height: 52px;
+                padding: 4px;
+                cursor: pointer;
+            }
+
+            .campo input[type="file"]{
+                padding: 10px;
+            }
+
+            .campo textarea{
+                resize: vertical;
+                min-height: 120px;
+            }
+
+            .campo-ancho-completo{
+                grid-column: span 2;
+            }
+
+            .acciones{
+                grid-column: span 2;
+                display: flex;
+                justify-content: center;
+                margin-top: 4px;
+            }
+
+            button[type="submit"]{
+                border: none;
+                border-radius: 14px;
+                padding: 13px 24px;
+                font-size: 1rem;
+                font-weight: 700;
+                color: white;
+                cursor: pointer;
+                background: linear-gradient(90deg, var(--orange), var(--pink), var(--blue));
+                box-shadow: 0 10px 24px rgba(255,79,216,0.18);
+                transition: 0.25s ease;
+                min-width: 220px;
+            }
+
+            button[type="submit"]:hover{
+                transform: translateY(-2px);
+                filter: brightness(1.08);
+            }
+
+            button[type="submit"]:active{
+                transform: translateY(0);
+            }
+
+            @media (max-width: 800px){
+                #formulario_n01{
+                    grid-template-columns: 1fr;
+                    padding: 20px;
+                }
+
+                .campo-ancho-completo,
+                .acciones{
+                    grid-column: span 1;
+                }
+
+                button[type="submit"]{
+                    width: 100%;
+                    min-width: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>FORMULARIO INFORMACIÓN PRODUCTO Y CLIENTE</h2>
+
+        <form id="formulario_n01" name="formularioN01" method="post" enctype="multipart/form-data">
+            
+            <div class="campo">
+                <p>Nombre completo</p>
+                <input type="text"
+                        id="input1"
+                        name="inputbox_1"
+                        size="35"
+                        placeholder="Escriba acá su nombre"
+                        value=""
+                        required
+                        autocomplete="off"
+                        title="Nombre en mayúsculas y mínimo 3 letras"
+                        pattern="[A-ZÁÉÍÓÚÑ ]{3,}">
+            </div>
+
+            <div class="campo">
+                <p>Documento de identidad</p>
+                <input type="number"
+                    id="input2"
+                    name="inputbox_2"
+                    size="35"
+                    placeholder="Escriba acá su documento"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Documento de identidad de 10 dígitos"
+                    min="1000000000"
+                    max="9999999999"
+                    step="1">
+            </div>
+
+            <div class="campo">
+                <p>Teléfono</p>
+                <input type="tel"
+                    id="input3"
+                    name="inputbox_3"
+                    size="35"
+                    placeholder="Escriba acá su teléfono"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Número telefónico de 10 dígitos"
+                    pattern="[0-9]{10}">
+            </div>
+
+            <div class="campo">
+                <p>Email</p>
+                <input type="email"
+                    id="input4"
+                    name="inputbox_4"
+                    size="35"
+                    placeholder="Escriba acá su correo electrónico"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Ingrese un correo electrónico válido"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            </div>
+
+            <div class="campo">
+                <p>Contraseña</p>
+                <input type="password"
+                    id="input5"
+                    name="inputbox_5"
+                    size="35"
+                    placeholder="Escriba acá su contraseña"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Ingrese una contraseña segura"
+                    class="PASSWORD">
+            </div>
+
+            <div class="campo">
+                <p>Dirección</p>
+                <input type="text"
+                    id="input6"
+                    name="inputbox_6"
+                    size="35"
+                    placeholder="Escriba acá su dirección"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Ingrese su dirección"
+                    class="TEXT">
+            </div>
+
+            <div class="campo">
+                <p>Producto</p>
+                <select id="input7"
+                    name="inputbox_7"
+                    required
+                    title="Seleccione el producto">
+                    <option value="">Seleccione una opción</option>
+                    <option value="mug">Mug</option>
+                    <option value="camisa">Camisa</option>
+                    <option value="buzo">Buzo</option>
+                    <option value="totebag">Totebag</option>
+                    <option value="case_celular">Case de celular</option>
+                    <option value="llavero">Llavero</option>
+                    <option value="retrato">Retrato</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <p>Color del diseño</p>
+                <input type="color"
+                    id="input8"
+                    name="inputbox_8"
+                    value="#000000"
+                    required
+                    title="Seleccione un color">
+            </div>
+
+            <div class="campo">
+                <p>Tamaño del diseño</p>
+                <input type="text"
+                    id="input9"
+                    name="inputbox_9"
+                    size="35"
+                    placeholder="Ejemplo: 10cmX8cm"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Formato: 10cmX8cm"
+                    pattern="[0-9]{1,3}cmX[0-9]{1,3}cm">
+            </div>
+
+            <div class="campo">
+                <p>Peso (KG) del producto</p>
+                <input type="number"
+                    id="input10"
+                    name="inputbox_10"
+                    size="35"
+                    placeholder="Escriba el peso en KG"
+                    value=""
+                    required
+                    autocomplete="off"
+                    title="Ingrese el peso en kilogramos"
+                    min="0"
+                    step="0.01">
+            </div>
+
+            <div class="campo campo-ancho-completo">
+                <p>Observaciones del diseño</p>
+                <textarea id="input11"
+                    name="inputbox_11"
+                    rows="5"
+                    cols="35"
+                    placeholder="Escriba aquí las observaciones"
+                    title="Observaciones del diseño"></textarea>
+            </div>
+
+            <div class="campo">
+                <p>Fecha de entrega del producto</p>
+                <input type="date"
+                    id="input12"
+                    name="inputbox_12"
+                    required
+                    title="Seleccione la fecha de entrega">
+            </div>
+
+            <div class="campo">
+                <p>Tipo de procesado del producto</p>
+                <input type="text"
+                    id="input13"
+                    name="inputbox_13"
+                    size="35"
+                    placeholder="Seleccione o escriba el tipo de procesado"
+                    list="procesado"
+                    required
+                    autocomplete="off"
+                    title="Elija un tipo de procesado">
+
+                <datalist id="procesado">
+                    <option value="Sublimado">
+                    <option value="Estampado">
+                    <option value="Impresión 3D">
+                    <option value="Grabado/Corte láser">
+                </datalist>
+            </div>
+
+            <div class="campo campo-ancho-completo">
+                <p>Imagen de referencia del diseño</p>
+                <input type="file"
+                    id="input14"
+                    name="inputbox_14"
+                    accept="image/*"
+                    required
+                    title="Suba una imagen de referencia">
+            </div>
+
+            <div class="acciones">
+                <button type="submit">Enviar formulario</button>
+            </div>
+
+        </form>
+
+        <script src="procesar_formulario_n01.js">
+        </script>
+    </body>
+</html>

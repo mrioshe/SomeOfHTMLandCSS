@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Mauricio Ríos Hernández">
+        <meta name="description" content="Custom Line es un negocio creativo especializado en ropa 
+                                        personalizada y objetos únicos hechos a tu medida.
+                                         Diseñamos y producimos estampados, sublimados, cortes
+                                          láser e impresión 3D para dar vida a prendas, mugs, llaveros,
+                                           tote bags, posillos y mucho más. Aquí cada detalle 
+                                           se convierte en una pieza original que refleja tu estilo,
+                                            tu marca o tu idea.">
+
+        <title>CUSTOM LINE: ACERCA DE</title>
+
+        <style>
+            :root{
+                --bg: #0b0f14;
+                --card: rgba(18, 24, 36, 0.96);
+                --card-2: rgba(23, 30, 43, 0.98);
+                --text: #f4f7fb;
+                --muted: #a9b3c1;
+                --border: rgba(255,255,255,0.10);
+                --orange: #ff8a00;
+                --pink: #ff4fd8;
+                --blue: #2bbcff;
+                --shadow: 0 12px 30px rgba(0,0,0,0.35);
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                color: var(--text);
+                background:
+                    radial-gradient(circle at top left, rgba(255,138,0,0.16), transparent 28%),
+                    radial-gradient(circle at top right, rgba(255,79,216,0.12), transparent 25%),
+                    radial-gradient(circle at bottom center, rgba(43,188,255,0.10), transparent 30%),
+                    var(--bg);
+                padding: 30px 16px;
+            }
+
+            h2{
+                text-align: center;
+                margin: 0 0 10px 0;
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            h3{
+                text-align: center;
+                margin: 0 0 24px 0;
+                font-size: 1.1rem;
+                color: var(--muted);
+                font-weight: 600;
+            }
+
+            .about-section{
+                max-width: 820px;
+                margin: 0 auto;
+                padding: 36px;
+                border: 1px solid var(--border);
+                border-radius: 22px;
+                background: linear-gradient(180deg, var(--card), rgba(11,15,20,0.96));
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(8px);
+            }
+
+            .about-header{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 28px;
+            }
+
+            .about-header img{
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid transparent;
+                background:
+                    linear-gradient(var(--card), var(--card)) padding-box,
+                    linear-gradient(90deg, var(--orange), var(--pink), var(--blue)) border-box;
+            }
+
+            .about-section p{
+                font-size: 1rem;
+                line-height: 1.7;
+                color: var(--text);
+                margin: 0 0 18px 0;
+            }
+
+            .about-section p strong{
+                color: var(--orange);
+            }
+
+            .servicios{
+                list-style: none;
+                margin: 0 0 24px 0;
+                padding: 0;
+                display: grid;
+                gap: 12px;
+            }
+
+            .servicios li{
+                background: linear-gradient(180deg, var(--card-2), rgba(11,15,20,0.9));
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 14px 18px;
+                font-size: 0.98rem;
+            }
+
+            .servicios li span.icono{
+                margin-right: 10px;
+            }
+
+            .volver-link{
+                display: block;
+                text-align: center;
+                margin-top: 18px;
+            }
+
+            .volver-link a{
+                color: var(--muted);
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+            .volver-link a:hover{
+                color: var(--text);
+            }
+
+            @media (max-width: 600px){
+                .about-section{
+                    padding: 24px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="about-section">
+
+            <div class="about-header">
+                <img src="logo.png" alt="Logo de Custom Line">
+                <h2>Custom Line</h2>
+                <h3>Personalización creativa hecha a tu medida</h3>
+            </div>
+
+            <p>
+                Página de encargos de custom Line. Página Beta. Software Build Date: 2026-06-24 
+            </p>
+
+            <p>
+                
+                <strong>Custom Line</strong> es un negocio creativo especializado en ropa personalizada
+                y objetos únicos hechos a tu medida. Diseñamos y producimos estampados, sublimados,
+                cortes láser e impresión 3D para dar vida a prendas, mugs, llaveros, tote bags,
+                posillos y mucho más.
+            </p>
+
+            <p>
+                Aquí cada detalle se convierte en una pieza original que refleja tu estilo,
+                tu marca o tu idea.
+            </p>
+
+            <ul class="servicios">
+                <li> Personalizamos tus ideas en camisetas, mugs, buzos y más.</li>
+                <li> Estampado DTF y sublimación.</li>
+                <li> Regalos | Marcas | Eventos.</li>
+            </ul>
+
+            <div class="volver-link">
+                <a href="index.html">&larr; Volver al inicio</a>
+            </div>
+
+        </section>
+    </body>
+</html>

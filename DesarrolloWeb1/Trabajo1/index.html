@@ -13,9 +13,34 @@
                                            se convierte en una pieza original que refleja tu estilo,
                                             tu marca o tu idea.">
 
-        <title>CUSTOM LINE: PRODUCTOS PERSONALIZADOS</title>
+        <title>CUSTOM LINE: PRODUCTOS PERSONALIZADOS</title><br>
+        
 
         <style>
+
+            .mensaje-validacion{
+                font-size: 0.78rem;
+                min-height: 14px;
+                margin-top: -2px;
+            }
+
+            .campo-valido{
+                border-color: #2ecc71 !important;
+                box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.15) !important;
+            }
+
+            .campo-invalido{
+                border-color: #ff4d4d !important;
+                box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.15) !important;
+            }
+
+            .mensaje-validacion.valido{
+                color: #2ecc71;
+            }
+
+            .mensaje-validacion.invalido{
+                color: #ff4d4d;
+            }
 
             select{
                 color: black;
@@ -199,14 +224,16 @@
 
     <body>
         <h2>FORMULARIO INFORMACIÓN PRODUCTO Y CLIENTE</h2>
+        <h3 style="text-align: center;"> CUSTOM LINE </h3>
 
         <form id="formulario_n01" name="formularioN01" method="post" enctype="multipart/form-data">
+            
             
             <div class="campo">
                 <p>Nombre completo</p>
                 <input type="text"
                         id="input1"
-                        name="inputbox_1"
+                        name="nombreCliente"
                         size="35"
                         placeholder="Escriba acá su nombre"
                         value=""
@@ -214,13 +241,14 @@
                         autocomplete="off"
                         title="Nombre en mayúsculas y mínimo 3 letras"
                         pattern="[A-ZÁÉÍÓÚÑ ]{3,}">
+                        <span class="mensaje-validacion" id="msg-nombreCliente"></span>
             </div>
 
             <div class="campo">
                 <p>Documento de identidad</p>
                 <input type="number"
                     id="input2"
-                    name="inputbox_2"
+                    name="identificacion"
                     size="35"
                     placeholder="Escriba acá su documento"
                     value=""
@@ -230,13 +258,14 @@
                     min="1000000000"
                     max="9999999999"
                     step="1">
+                    <span class="mensaje-validacion" id="msg-identificacion"></span>
             </div>
 
             <div class="campo">
-                <p>Teléfono</p>
+                <p>Teléfono celular</p>
                 <input type="tel"
                     id="input3"
-                    name="inputbox_3"
+                    name="telefono"
                     size="35"
                     placeholder="Escriba acá su teléfono"
                     value=""
@@ -244,13 +273,15 @@
                     autocomplete="off"
                     title="Número telefónico de 10 dígitos"
                     pattern="[0-9]{10}">
+                    <span class="mensaje-validacion" id="msg-telefono"></span>
+                    
             </div>
 
             <div class="campo">
                 <p>Email</p>
                 <input type="email"
                     id="input4"
-                    name="inputbox_4"
+                    name="email"
                     size="35"
                     placeholder="Escriba acá su correo electrónico"
                     value=""
@@ -258,13 +289,14 @@
                     autocomplete="off"
                     title="Ingrese un correo electrónico válido"
                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <span class="mensaje-validacion" id="msg-email"></span>
             </div>
 
             <div class="campo">
                 <p>Contraseña</p>
                 <input type="password"
                     id="input5"
-                    name="inputbox_5"
+                    name="contrasenha"
                     size="35"
                     placeholder="Escriba acá su contraseña"
                     value=""
@@ -272,26 +304,28 @@
                     autocomplete="off"
                     title="Ingrese una contraseña segura"
                     class="PASSWORD">
+                    <span class="mensaje-validacion" id="msg-contrasenha"></span>
             </div>
 
             <div class="campo">
                 <p>Dirección</p>
                 <input type="text"
                     id="input6"
-                    name="inputbox_6"
+                    name="direccion en menos de 100 carácteres"
                     size="35"
                     placeholder="Escriba acá su dirección"
                     value=""
                     required
                     autocomplete="off"
-                    title="Ingrese su dirección"
+                    title="Ingrese su dirección "
                     class="TEXT">
+                    <span class="mensaje-validacion" id="msg-direccion"></span>
             </div>
 
             <div class="campo">
                 <p>Producto</p>
                 <select id="input7"
-                    name="inputbox_7"
+                    name="tipoProducto"
                     required
                     title="Seleccione el producto">
                     <option value="">Seleccione una opción</option>
@@ -303,23 +337,27 @@
                     <option value="llavero">Llavero</option>
                     <option value="retrato">Retrato</option>
                 </select>
+
+                <span class="mensaje-validacion" id="msg-tipoProducto"></span>
+
             </div>
 
             <div class="campo">
                 <p>Color del diseño</p>
                 <input type="color"
                     id="input8"
-                    name="inputbox_8"
-                    value="#000000"
+                    name="color"
+                    value="#123456"
                     required
                     title="Seleccione un color">
+                    <span class="mensaje-validacion" id="msg-color"></span>
             </div>
 
             <div class="campo">
                 <p>Tamaño del diseño</p>
                 <input type="text"
                     id="input9"
-                    name="inputbox_9"
+                    name="tamanho"
                     size="35"
                     placeholder="Ejemplo: 10cmX8cm"
                     value=""
@@ -327,13 +365,14 @@
                     autocomplete="off"
                     title="Formato: 10cmX8cm"
                     pattern="[0-9]{1,3}cmX[0-9]{1,3}cm">
+                    <span class="mensaje-validacion" id="msg-tamanho"></span>
             </div>
 
             <div class="campo">
                 <p>Peso (KG) del producto</p>
                 <input type="number"
                     id="input10"
-                    name="inputbox_10"
+                    name="peso"
                     size="35"
                     placeholder="Escriba el peso en KG"
                     value=""
@@ -342,32 +381,35 @@
                     title="Ingrese el peso en kilogramos"
                     min="0"
                     step="0.01">
+                    <span class="mensaje-validacion" id="msg-peso"></span>
             </div>
 
             <div class="campo campo-ancho-completo">
                 <p>Observaciones del diseño</p>
                 <textarea id="input11"
-                    name="inputbox_11"
+                    name="observacion"
                     rows="5"
                     cols="35"
-                    placeholder="Escriba aquí las observaciones"
+                    placeholder="Escriba aquí las observaciones en menos de 400 carácteres"
                     title="Observaciones del diseño"></textarea>
+                    <span class="mensaje-validacion" id="msg-observacion"></span>
             </div>
 
             <div class="campo">
                 <p>Fecha de entrega del producto</p>
                 <input type="date"
                     id="input12"
-                    name="inputbox_12"
+                    name="fechaEntrega"
                     required
                     title="Seleccione la fecha de entrega">
+                    <span class="mensaje-validacion" id="msg-fechaEntrega"></span>
             </div>
 
             <div class="campo">
                 <p>Tipo de procesado del producto</p>
                 <input type="text"
                     id="input13"
-                    name="inputbox_13"
+                    name="procesado"
                     size="35"
                     placeholder="Seleccione o escriba el tipo de procesado"
                     list="procesado"
@@ -381,23 +423,31 @@
                     <option value="Impresión 3D">
                     <option value="Grabado/Corte láser">
                 </datalist>
+
+                <span class="mensaje-validacion" id="msg-procesado"></span>
             </div>
 
             <div class="campo campo-ancho-completo">
                 <p>Imagen de referencia del diseño</p>
                 <input type="file"
                     id="input14"
-                    name="inputbox_14"
+                    name="imagen"
                     accept="image/*"
                     required
                     title="Suba una imagen de referencia">
+                    <span class="mensaje-validacion" id="msg-imagen"></span>
             </div>
 
             <div class="acciones">
                 <button type="submit">Enviar formulario</button>
             </div>
 
+
         </form>
+ <h4 style="text-align: center;"> Acerca de notros:<a href="about.html"> Acerca de nosotros</a> </h3>
+        
+
+
 
         <script src="procesar_formulario_n01.js">
         </script>

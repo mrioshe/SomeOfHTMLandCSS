@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Mauricio Ríos Hernández">
+        <title>CUSTOM LINE: FORMULARIO ENVIADO</title>
+
+        <style>
+            :root{
+                --bg: #0b0f14;
+                --card: rgba(18, 24, 36, 0.96);
+                --card-2: rgba(23, 30, 43, 0.98);
+                --text: #f4f7fb;
+                --muted: #a9b3c1;
+                --border: rgba(255,255,255,0.10);
+                --orange: #ff8a00;
+                --pink: #ff4fd8;
+                --blue: #2bbcff;
+                --shadow: 0 12px 30px rgba(0,0,0,0.35);
+            }
+
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                margin: 0;
+                min-height: 100vh;
+                font-family: Arial, Helvetica, sans-serif;
+                color: var(--text);
+                background:
+                    radial-gradient(circle at top left, rgba(255,138,0,0.16), transparent 28%),
+                    radial-gradient(circle at top right, rgba(255,79,216,0.12), transparent 25%),
+                    radial-gradient(circle at bottom center, rgba(43,188,255,0.10), transparent 30%),
+                    var(--bg);
+                padding: 30px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .contenedor-confirmacion{
+                max-width: 560px;
+                width: 100%;
+                padding: 40px 32px;
+                border: 1px solid var(--border);
+                border-radius: 22px;
+                background: linear-gradient(180deg, var(--card), rgba(11,15,20,0.96));
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(8px);
+                text-align: center;
+            }
+
+            .icono-exito{
+                width: 72px;
+                height: 72px;
+                margin: 0 auto 20px auto;
+                border-radius: 50%;
+                background: linear-gradient(90deg, var(--orange), var(--pink), var(--blue));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: white;
+            }
+
+            h2{
+                margin: 0 0 12px 0;
+                font-size: 1.5rem;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+            }
+
+            p.mensaje{
+                margin: 0 0 28px 0;
+                font-size: 1rem;
+                color: var(--muted);
+                line-height: 1.5;
+            }
+
+            a.boton-volver{
+                display: inline-block;
+                text-decoration: none;
+                border: none;
+                border-radius: 14px;
+                padding: 13px 24px;
+                font-size: 1rem;
+                font-weight: 700;
+                color: white;
+                cursor: pointer;
+                background: linear-gradient(90deg, var(--orange), var(--pink), var(--blue));
+                box-shadow: 0 10px 24px rgba(255,79,216,0.18);
+                transition: 0.25s ease;
+            }
+
+            a.boton-volver:hover{
+                transform: translateY(-2px);
+                filter: brightness(1.08);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="contenedor-confirmacion">
+            <div class="icono-exito">&#10003;</div>
+            <h2>Formulario enviado</h2>
+            <p class="mensaje">Todos los datos fueron validados y el formulario fue validado</p>
+            <a class="boton-volver" href="index.html">Volver al formulario</a>
+        </div>
+    </body>
+</html>
